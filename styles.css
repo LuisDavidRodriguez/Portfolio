@@ -68,7 +68,7 @@ header {
   line-height: 82px;
   margin-top: 0.3em;
   margin-bottom: 0;
-  color: #FF6B00;
+  color: #ff6b00;
   color: var(--color-accent);
   text-align: center;
 }
@@ -107,10 +107,10 @@ header {
 }
 
 #nav-bar li a:hover {
-    animation-name: move;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    position: relative;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
 }
 
 @keyframes move {
