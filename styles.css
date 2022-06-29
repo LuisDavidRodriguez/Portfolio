@@ -1,7 +1,7 @@
 :root {
   --color-primary: hsl(0, 0%, 20%);
   --color-primary-light: hsl(0, 0%, 30%);
-  --color-accent: #FF6B00;
+  --color-accent: #FF6b00;
   --nav-height: 60px;
 }
 
@@ -35,7 +35,7 @@ header {
 
 #nav-bar {
   list-style: none;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
 #nav-bar li {
@@ -69,7 +69,6 @@ header {
 }
 
 #title {
-  font-family: 'Crete Round';
   font-style: normal;
   font-weight: 400;
   font-size: 72px;
@@ -79,7 +78,7 @@ header {
   color: #FF6B00;
   color: var(--color-accent);
   text-align: center;
-  }
+}
 
 #information {
   color: white;
@@ -99,7 +98,7 @@ header {
 
 #contact li {
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 #contact li a {
@@ -114,18 +113,17 @@ header {
   color: var(--color-accent);
 }
 
-
-
 @keyframes move {
   0% {
     left: 0;
   }
+
   25% {
     left: 10px;
   }
 
   50% {
-    left: 0px;
+    left: 0;
   }
 
   75% {
@@ -133,8 +131,6 @@ header {
   }
 
   100% {
-    left: 0px;
+    left: 0;
   }
-
 }
-
