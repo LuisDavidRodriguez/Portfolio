@@ -1,0 +1,135 @@
+:root {
+  --color-primary: hsl(0, 0%, 20%);
+  --color-primary-light: hsl(0, 0%, 30%);
+  --color-accent: #ff6b00;
+  --nav-height: 60px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gainsboro;
+  background-color: var(--color-primary-light);
+  position: fixed;
+  height: var(--nav-height);
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#logo {
+  margin-left: 10px;
+}
+
+#logo a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+#nav-bar {
+  list-style: none;
+  padding: 0 20px;
+}
+
+#nav-bar li {
+  display: inline-block;
+}
+
+#nav-bar li a {
+  color: white;
+}
+
+#welcome-section {
+  background-color: gray;
+  background-color: var(--color-primary);
+  background-image: url("images/figure.png");
+  background-size: 60% auto;
+  background-repeat: no-repeat;
+  background-position: 150% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 82px;
+  margin-top: var(--nav-height);
+  margin-bottom: 0;
+  color: #ff6b00;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+#information {
+  color: white;
+  width: auto;
+  padding: 0 1em;
+}
+
+#information p {
+  width: 95%;
+}
+
+#contact {
+  list-style: none;
+  padding-inline-start: 0%;
+  align-self: flex-start;
+}
+
+#contact li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+#contact li a {
+  text-decoration: none;
+  color: white;
+  width: 30px;
+  height: 80px;
+  transition: all 0.4s linear;
+}
+
+#contact li a:hover {
+  color: var(--color-accent);
+}
+
+#nav-bar li a:hover {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 10px;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  75% {
+    left: -10px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
