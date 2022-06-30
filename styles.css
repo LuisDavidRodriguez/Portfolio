@@ -1,13 +1,18 @@
 :root {
   --color-primary: hsl(0, 0%, 20%);
   --color-primary-light: hsl(0, 0%, 30%);
-  --color-accent: #ff6b00;
+  --color-accent: hsl(25, 100%, 50%);
+  --color-accent-dark: hsl(25, 100%, 30%);
   --nav-height: 60px;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 100%;
 }
 
 header {
@@ -101,15 +106,156 @@ header {
   transition: all 0.4s linear;
 }
 
+#project-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  height: 20vh;
+}
+
+#project-title h2 {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+#project-title div {
+  background-color: var(--color-primary-light);
+  height: 2px;
+  width: 100%;
+}
+
+#principal-project-section {
+  display: grid;
+  grid-template-columns: minmax(300px, 600px);
+  grid-gap: 30px;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: aquamarine;
+}
+
+.stories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories-img {
+  display: block;
+  max-width: 80%;
+  min-width: 150px;
+  height: auto;
+  max-height: 500px;
+  padding: 1em;
+  background-color: var(--color-accent);
+}
+
+.stories-subtitle {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+
+.stories-paragraph {
+  max-width: 80%;
+  min-width: 150px;
+  text-justify: distribute-all-lines;
+}
+
+.stories-technologies {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.sto {
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px var(--color-primary-light);
+  border-radius: 5px;
+}
+
+.project-container {
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 5px;
+}
+
+#project-1 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
+  background-size: auto 100%;
+}
+
+.project-subtitle {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  margin-bottom: 0;
+  color: white;
+}
+
+.project-paragraph {
+  max-width: 80%;
+  min-width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-justify: distribute-all-lines;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+}
+
+.tec {
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px var(--color-primary-light);
+  background-color: rgba(146, 146, 146, 0.555);
+  border-radius: 5px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.about-container {
+  background: url("images/Frame.png") 100% 50% no-repeat, var(--color-primary);
+  background-size: 100px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  text-align: center;
+}
+
 #contact li a:hover {
   color: var(--color-accent);
 }
 
 #nav-bar li a:hover {
+  width: 100px;
+  border-style: solid;
   animation-name: move;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   position: relative;
+}
+
+.button:hover {
+  background-color: var(--color-accent-dark);
 }
 
 @keyframes move {
@@ -118,7 +264,7 @@ header {
   }
 
   25% {
-    left: 10px;
+    left: 5px;
   }
 
   50% {
@@ -126,7 +272,7 @@ header {
   }
 
   75% {
-    left: -10px;
+    left: -5px;
   }
 
   100% {
