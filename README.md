@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portafolio
+# Portfolio
 It is my portfolio, experience has a software developer
 
 > Description the project.
@@ -18,12 +18,9 @@ It is my portfolio, experience has a software developer
 - HTML
 - CSS
 
-## Live Demo (if available)
-we don't have a demo yet
-
-
 ## Getting Started
-
+- Please download clone the reporsitory
+- Go to index.html to see the portfolio
 
 
 
@@ -47,8 +44,3 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-
-## 📝 License
