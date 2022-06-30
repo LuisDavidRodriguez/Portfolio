@@ -335,6 +335,10 @@ header {
   background-color: var(--color-accent-dark);
 }
 
+.project-container:hover {
+  transform: scale(1.1);
+}
+
 @keyframes move {
   0% {
     left: 0;
