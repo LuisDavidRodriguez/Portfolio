@@ -1,13 +1,18 @@
 :root {
   --color-primary: hsl(0, 0%, 20%);
   --color-primary-light: hsl(0, 0%, 30%);
-  --color-accent: #ff6b00;
+  --color-accent: hsl(25, 100%, 50%);
+  --color-accent-dark: hsl(25, 100%, 30%);
   --nav-height: 60px;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 100%;
 }
 
 header {
@@ -101,15 +106,242 @@ header {
   transition: all 0.4s linear;
 }
 
+#project-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  height: 20vh;
+}
+
+#project-title h2 {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+#project-title div {
+  background-color: var(--color-primary-light);
+  height: 2px;
+  width: 100%;
+}
+
+.stories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stories-img {
+  display: block;
+  max-width: 80%;
+  min-width: 150px;
+  height: auto;
+  max-height: 500px;
+}
+
+.stories-subtitle {
+  font-family: 'Roboto', Helvetica, sans-serif;
+  margin-bottom: 0;
+}
+
+.stories-paragraph {
+  max-width: 80%;
+  min-width: 150px;
+  text-justify: distribute-all-lines;
+}
+
+.stories-technologies {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.sto {
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px var(--color-primary-light);
+  border-radius: 5px;
+}
+
+#principal-project-section {
+  display: grid;
+  grid-template-columns: minmax(400px, 600px);
+  grid-gap: 30px;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 150px 0;
+}
+
+.project-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
+  background-size: auto 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.project-subtitle {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  margin-bottom: 0;
+  color: white;
+}
+
+.project-paragraph {
+  max-width: 80%;
+  min-width: 150px;
+  margin: 0 10px;
+  text-justify: distribute-all-lines;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+}
+
+.tec {
+  display: inline-block;
+  font-size: 1em;
+  margin: 5px;
+  padding: 10px;
+  border: solid 1px var(--color-primary-light);
+  background-color: rgba(146, 146, 146, 0.555);
+  border-radius: 5px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.about-section {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 10px;
+}
+
+.about-container {
+  background: url("images/Frame.png") 100% 100% no-repeat;
+  background-size: 30% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  height: 500px;
+}
+
+#about-title {
+  color: var(--color-accent);
+  font-family: 'Crete Round', serif;
+  width: 100%;
+  font-size: 4em;
+  font-weight: 400;
+  text-align: start;
+  margin: 0;
+}
+
+#divition {
+  margin-top: 20px;
+  width: 80%;
+  height: 3px;
+  background-color: var(--color-primary-light);
+  align-self: center;
+}
+
+#about-description {
+  max-width: 500px;
+  min-width: 150px;
+  margin: 0 10px;
+  text-justify: distribute-all-lines;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.knowledge-container {
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.knowledge-list {
+  list-style: none;
+  margin-block-start: 0;
+  padding-inline-start: 0%;
+  margin-bottom: 50px;
+}
+
+.knowledge-list .li {
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 20px 0;
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  padding: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  text-align: center;
+}
+
+/* Step 1: Common Properties: All required to make icons render reliably https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.knowledge-container #lang::before {
+  content: '\f219';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+.knowledge-container #frame::before {
+  content: '\f0c8';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+.knowledge-container #skil::before {
+  content: '\f111';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
 #contact li a:hover {
   color: var(--color-accent);
 }
 
 #nav-bar li a:hover {
+  width: 100px;
+  border-style: solid;
   animation-name: move;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   position: relative;
+}
+
+.button:hover {
+  background-color: var(--color-accent-dark);
+}
+
+.project-container:hover {
+  transform: scale(1.01);
 }
 
 @keyframes move {
@@ -118,7 +350,7 @@ header {
   }
 
   25% {
-    left: 10px;
+    left: 5px;
   }
 
   50% {
@@ -126,7 +358,7 @@ header {
   }
 
   75% {
-    left: -10px;
+    left: -5px;
   }
 
   100% {
