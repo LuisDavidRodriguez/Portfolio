@@ -293,6 +293,36 @@ header {
   text-align: center;
 }
 
+/* Step 1: Common Properties: All required to make icons render reliably https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.knowledge-container #lang::before {
+  content: '\f219';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+.knowledge-container #frame::before {
+  content: '\f0c8';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
+.knowledge-container #skil::before {
+  content: '\f111';
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  color: var(--color-accent);
+  margin-right: 10px;
+}
+
 #contact li a:hover {
   color: var(--color-accent);
 }
