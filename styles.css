@@ -117,7 +117,7 @@ header {
 
 #project-title h2 {
   font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 #project-title div {
@@ -138,8 +138,6 @@ header {
   min-width: 150px;
   height: auto;
   max-height: 500px;
-  padding: 1em;
-  background-color: var(--color-accent);
 }
 
 .stories-subtitle {
@@ -169,7 +167,7 @@ header {
 
 #principal-project-section {
   display: grid;
-  grid-template-columns: minmax(300px, 600px);
+  grid-template-columns: minmax(400px, 600px);
   grid-gap: 30px;
   justify-content: center;
   width: 100%;
@@ -178,35 +176,12 @@ header {
 }
 
 .project-container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
+  background-size: auto 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 5px;
-}
-
-#project-1 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
-  background-size: auto 100%;
-}
-
-#project-2 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
-  background-size: auto 100%;
-}
-
-#project-3 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
-  background-size: auto 100%;
-}
-
-#project-4 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
-  background-size: auto 100%;
-}
-
-#project-5 {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
-  background-size: auto 100%;
+  margin: 20px;
 }
 
 .project-subtitle {
