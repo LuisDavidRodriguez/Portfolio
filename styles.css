@@ -54,7 +54,7 @@ header {
 #welcome-section {
   background-color: gray;
   background-color: var(--color-primary);
-  background-image: url("images/figure.png");
+  background-image: url('images/figure.png');
   background-size: 60% auto;
   background-repeat: no-repeat;
   background-position: 150% 100%;
@@ -176,7 +176,8 @@ header {
 }
 
 .project-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("images/RPM_principal.jpg") 50% 50% no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
+    url('images/RPM_principal.jpg') 50% 50% no-repeat;
   background-size: auto 100%;
   display: flex;
   flex-direction: column;
@@ -223,7 +224,7 @@ header {
 }
 
 .about-container {
-  background: url("images/Frame.png") 100% 100% no-repeat;
+  background: url('images/Frame.png') 100% 100% no-repeat;
   background-size: 30% auto;
   display: flex;
   flex-direction: column;
@@ -293,6 +294,48 @@ header {
   text-align: center;
 }
 
+footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer h2 {
+  text-align: center;
+  color: #172b4d;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  font-family: 'Inter';
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  margin: 20px 0;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px grey;
+  padding-bottom: 15px;
+}
+
+form textarea {
+  background-color: #fbf8f7;
+  width: 100%;
+  border: none;
+}
+
+form #btn-sub {
+  width: 140px;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 25px 0;
+  border: none;
+}
+
 /* Step 1: Common Properties: All required to make icons render reliably https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
 .icon::before {
   display: inline-block;
@@ -304,21 +347,21 @@ header {
 
 .knowledge-container #lang::before {
   content: '\f219';
-  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
 
 .knowledge-container #frame::before {
   content: '\f0c8';
-  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
 
 .knowledge-container #skil::before {
   content: '\f111';
-  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
+  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
