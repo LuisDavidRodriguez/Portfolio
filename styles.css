@@ -176,8 +176,7 @@ header {
 }
 
 .project-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
-    url('images/RPM_principal.jpg') 50% 50% no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url('images/RPM_principal.jpg') 50% 50% no-repeat;
   background-size: auto 100%;
   display: flex;
   flex-direction: column;
@@ -295,20 +294,24 @@ header {
 }
 
 footer {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-footer h2 {
+footer h3 {
   text-align: center;
   color: #172b4d;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
-  font-family: 'Inter';
+  font-family: 'Inter', sans-serif;
 }
 
 form {
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,14 +329,38 @@ form textarea {
   background-color: #fbf8f7;
   width: 100%;
   border: none;
+  font-family: 'Inter', sans-serif;
 }
 
-form #btn-sub {
-  width: 140px;
+#btn-sub {
   font-size: 17px;
   font-weight: 700;
   margin: 25px 0;
   border: none;
+}
+
+#contact-2 {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+#contact-2 li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#contact-2 li a {
+  color: var(--color-primary);
+  transition: all 0.5s linear;
+}
+
+footer .bar-foot {
+  width: 30%;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
 /* Step 1: Common Properties: All required to make icons render reliably https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
@@ -367,6 +394,10 @@ form #btn-sub {
 }
 
 #contact li a:hover {
+  color: var(--color-accent);
+}
+
+#contact-2 li a:hover {
   color: var(--color-accent);
 }
 
