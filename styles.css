@@ -34,13 +34,17 @@ header {
 }
 
 #logo {
-  margin-left: 10px;
+  margin-left: 5%;
 }
 
 #logo a {
   color: white;
   text-decoration: none;
   font-weight: 800;
+}
+
+nav {
+  margin-right: 3%;
 }
 
 #nav-bar {
@@ -55,7 +59,6 @@ header {
 #nav-bar li a {
   color: white;
   text-decoration: none;
-  margin: 0 5px;
 }
 
 .nav-desktop {
@@ -66,9 +69,9 @@ header {
   background-color: gray;
   background-color: var(--color-primary);
   background-image: url('images/figure.png');
-  background-size: 60% auto;
+  background-size: 60%;
   background-repeat: no-repeat;
-  background-position: 150% 100%;
+  background-position: 160% 110%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -96,9 +99,17 @@ header {
   font-family: 'Crete Round', sans-serif;
 }
 
+#information h2 {
+  font-size: var(--font-size-subtitle);
+  font-family: 'Inter', sans-serif;
+}
+
 #information p {
   width: 95%;
   font-size: var(--font-size-paragraph);
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  line-height: 32px;
 }
 
 #contact {
@@ -473,5 +484,41 @@ footer .bar-foot {
 
   100% {
     left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  .nav-movile {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: inline-block;
+    font-family: 'inter', sans-serif;
+    margin: 0 15px;
+    transition: all 0.5s linear;
+  }
+
+  #welcome-section {
+    background-size: 30%;
+    background-position: center right;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  #information {
+    width: 500px;
+    margin-top: 0;
+    margin-left: 3%;
+  }
+
+  #contact li {
+    display: block;
+    margin: 20px 0;
   }
 }
