@@ -81,9 +81,9 @@ nav {
 
 #information {
   color: white;
-  width: auto;
+  max-width: 500px;
   padding: 0 1em;
-  margin-top: 20vh;
+  margin-top: 5vh;
 }
 
 #title {
@@ -202,12 +202,11 @@ nav {
 
 #principal-project-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   justify-content: center;
-  width: 100%;
-  height: auto;
-  margin: 150px 0;
+  margin: 150px auto;
+  grid-gap: 20px;
+  width: 95%;
 }
 
 .project-container {
