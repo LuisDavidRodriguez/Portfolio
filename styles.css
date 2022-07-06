@@ -141,7 +141,7 @@ nav {
 }
 
 #project-title h2 {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Create Round', Helvetica, sans-serif;
   font-size: var(--font-size-subtitle);
 }
 
@@ -155,14 +155,22 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1em;
+}
+
+.stories-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  min-width: 352px;
 }
 
 .stories-img {
   display: block;
-  max-width: 80%;
-  min-width: 150px;
+  width: 100%;
+  max-width: 327px;
   height: auto;
-  max-height: 500px;
 }
 
 .stories-subtitle {
@@ -172,7 +180,7 @@ nav {
 }
 
 .stories-paragraph {
-  max-width: 80%;
+  max-width: 100%;
   min-width: 150px;
   text-justify: distribute-all-lines;
   font-size: var(--font-size-paragraph);
@@ -194,8 +202,9 @@ nav {
 
 #principal-project-section {
   display: grid;
-  grid-template-columns: minmax(400px, 600px);
-  grid-gap: 30px;
+  grid-template-columns: 500px;
+  grid-row: repeat (5, 500px);
+  grid-gap: 20px;
   justify-content: center;
   width: 100%;
   height: auto;
@@ -208,7 +217,6 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 20px;
 }
 
 .project-subtitle {
@@ -248,7 +256,7 @@ nav {
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
-  padding: 100px 10px;
+  padding: 100px 0;
 }
 
 .about-container {
@@ -257,8 +265,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 100%;
   height: 500px;
+  margin-left: 5%;
 }
 
 #about-title {
@@ -273,7 +281,7 @@ nav {
 
 #divition {
   margin-top: 20px;
-  width: 80%;
+  width: 90%;
   height: 3px;
   background-color: var(--color-primary-light);
   align-self: center;
@@ -282,7 +290,6 @@ nav {
 #about-description {
   max-width: 500px;
   min-width: 150px;
-  margin: 0 10px;
   text-justify: distribute-all-lines;
   color: white;
   font-family: 'Inter', sans-serif;
@@ -450,7 +457,10 @@ footer .bar-foot {
 
 #nav-bar li a:hover {
   width: 100px;
-  border-style: solid;
+  border-style: groove;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: var(--color-accent);
   animation-name: move;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -471,7 +481,7 @@ footer .bar-foot {
   }
 
   25% {
-    left: 5px;
+    left: 2px;
   }
 
   50% {
@@ -479,7 +489,7 @@ footer .bar-foot {
   }
 
   75% {
-    left: -5px;
+    left: -2px;
   }
 
   100% {
@@ -521,4 +531,54 @@ footer .bar-foot {
     display: block;
     margin: 20px 0;
   }
+
+  #project-title {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #project-title h2 {
+    width: fit-content;
+    margin-right: 20px;
+  }
+
+  #project-title div {
+    width: 70%;
+  }
+
+  .stories-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .stories-img {
+    max-width: 684px;
+    width: 60%;
+  }
+
+  .stories-info {
+    margin-left: 20px;
+    max-width: 558px;
+    min-width: 290px;
+  }
+
+  #principal-project-section {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 400px));
+  }
+
+  .about-container {
+    background: url('images/frame_big.png') 100% 50% no-repeat;
+    background-size: 40% auto;
+  }
+
+  .knowledge-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .knowledge-container {
+    text-align: start;
+  }
+
 }
