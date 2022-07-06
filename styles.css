@@ -202,8 +202,7 @@ nav {
 
 #principal-project-section {
   display: grid;
-  grid-template-columns: 500px;
-  grid-row: repeat (5, 500px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 400px));
   grid-gap: 20px;
   justify-content: center;
   width: 100%;
@@ -566,11 +565,6 @@ footer .bar-foot {
     margin-left: 20px;
     max-width: 558px;
     min-width: 290px;
-  }
-
-  #principal-project-section {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 400px));
   }
 
   .about-container {
