@@ -48,12 +48,18 @@ header {
   padding: 0 20px;
 }
 
-#nav-bar li {
+.nav-movile {
   display: inline-block;
 }
 
 #nav-bar li a {
   color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.nav-desktop {
+  display: none;
 }
 
 #welcome-section {
