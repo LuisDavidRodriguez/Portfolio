@@ -4,15 +4,12 @@
   --color-accent: hsl(25, 100%, 50%);
   --color-accent-dark: hsl(25, 100%, 30%);
   --nav-height: 60px;
+  --nav-clear: 100px;
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-main {
-  width: 100%;
 }
 
 header {
@@ -60,9 +57,16 @@ header {
   background-position: 150% 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   width: 100%;
+}
+
+#information {
+  color: white;
+  width: auto;
+  padding: 0 1em;
+  margin-top: 20vh;
 }
 
 #title {
@@ -74,13 +78,8 @@ header {
   margin-bottom: 0;
   color: #ff6b00;
   color: var(--color-accent);
-  text-align: center;
-}
-
-#information {
-  color: white;
-  width: auto;
-  padding: 0 1em;
+  text-align: left;
+  font-family: 'Crete Round', sans-serif;
 }
 
 #information p {
@@ -90,7 +89,7 @@ header {
 #contact {
   list-style: none;
   padding-inline-start: 0%;
-  align-self: flex-start;
+  padding: 0 1em;
 }
 
 #contact li {
@@ -295,13 +294,24 @@ header {
 
 footer {
   width: 100%;
+  height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
-
-footer h3 {
+/* stylelint-disable-next-line no-descending-specificity */
+footer h2 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-accent);
+  font-size: 50px;
+  margin-top: var(--nav-clear) 0 0 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+/* stylelint-disable-next-line no-descending-specificity */
+footer p {
   text-align: center;
   color: #172b4d;
   font-size: 32px;
