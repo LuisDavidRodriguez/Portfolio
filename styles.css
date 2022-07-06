@@ -5,6 +5,14 @@
   --color-accent-dark: hsl(25, 100%, 30%);
   --nav-height: 60px;
   --nav-clear: 100px;
+  --font-size-title: 4.5rem;
+  --font-size-subtitle: 2rem;
+  --font-size-paragraph: 1.3rem;
+}
+
+/* https://www.zealousweb.com/everything-you-need-to-know-about-em-rem/#:~:text=The%20default%20root%20font%20size%20of%20HTML%20is%2016px. */
+html {
+  font-size: 16px;
 }
 
 body {
@@ -72,7 +80,7 @@ header {
 #title {
   font-style: normal;
   font-weight: 400;
-  font-size: 72px;
+  font-size: var(--font-size-title);
   line-height: 82px;
   margin-top: var(--nav-height);
   margin-bottom: 0;
@@ -84,6 +92,7 @@ header {
 
 #information p {
   width: 95%;
+  font-size: var(--font-size-paragraph);
 }
 
 #contact {
@@ -116,7 +125,7 @@ header {
 
 #project-title h2 {
   font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: var(--font-size-subtitle);
 }
 
 #project-title div {
@@ -142,12 +151,14 @@ header {
 .stories-subtitle {
   font-family: 'Roboto', Helvetica, sans-serif;
   margin-bottom: 0;
+  font-size: var(--font-size-subtitle);
 }
 
 .stories-paragraph {
   max-width: 80%;
   min-width: 150px;
   text-justify: distribute-all-lines;
+  font-size: var(--font-size-paragraph);
 }
 
 .stories-technologies {
@@ -157,7 +168,7 @@ header {
 
 .sto {
   display: inline-block;
-  font-size: 1em;
+  font-size: var(--font-size-paragraph);
   margin: 5px;
   padding: 10px;
   border: solid 1px var(--color-primary-light);
@@ -189,6 +200,7 @@ header {
   font-family: 'Roboto', Helvetica, sans-serif;
   margin-bottom: 0;
   color: white;
+  font-size: var(--font-size-subtitle);
 }
 
 .project-paragraph {
@@ -199,11 +211,12 @@ header {
   color: white;
   font-family: 'Inter', sans-serif;
   font-weight: 200;
+  font-size: var(--font-size-paragraph);
 }
 
 .tec {
   display: inline-block;
-  font-size: 1em;
+  font-size: var(--font-size-paragraph);
   margin: 5px;
   padding: 10px;
   border: solid 1px var(--color-primary-light);
@@ -258,6 +271,7 @@ header {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   margin-bottom: 30px;
+  font-size: var(--font-size-paragraph);
 }
 
 .knowledge-container {
@@ -265,6 +279,12 @@ header {
   text-align: center;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
+}
+
+#lang,
+#frame,
+#skil {
+  font-size: var(--font-size-subtitle);
 }
 
 .knowledge-list {
@@ -275,7 +295,7 @@ header {
 }
 
 .knowledge-list .li {
-  font-size: 1.5em;
+  font-size: var(--font-size-paragraph);
   font-weight: 200;
   margin: 20px 0;
 }
@@ -283,7 +303,7 @@ header {
 .button {
   background-color: var(--color-accent);
   color: white;
-  font-size: 1.5em;
+  font-size: var(--font-size-paragraph);
   font-family: 'Roboto', Helvetica, sans-serif;
   padding: 15px;
   font-weight: 400;
@@ -305,7 +325,7 @@ footer {
 footer h2 {
   font-family: 'Roboto', sans-serif;
   color: var(--color-accent);
-  font-size: 50px;
+  font-size: var(--font-size-title);
   margin-top: var(--nav-clear) 0 0 0;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -314,7 +334,7 @@ footer h2 {
 footer p {
   text-align: center;
   color: #172b4d;
-  font-size: 32px;
+  font-size: var(--font-size-subtitle);
   font-weight: 700;
   line-height: 44px;
   font-family: 'Inter', sans-serif;
@@ -343,7 +363,7 @@ form textarea {
 }
 
 #btn-sub {
-  font-size: 17px;
+  font-size: var(--font-size-paragraph);
   font-weight: 700;
   margin: 25px 0;
   border: none;
