@@ -221,6 +221,7 @@ nav {
   flex-direction: column;
   justify-content: flex-end;
   transition-duration: 1s;
+  height: 500px;
 }
 
 .project-subtitle {
@@ -612,6 +613,17 @@ footer .bar-foot {
     min-width: 290px;
   }
 
+  /* hide the 4 direct child which is the button */
+  .project-container > :nth-child(4) {
+    display: none;
+  }
+
+  .project-container > * {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
   .about-container {
     background: url('images/frame_big.png') 100% 50% no-repeat;
     background-size: 40% auto;
@@ -651,5 +663,20 @@ footer .bar-foot {
     border-top: 1px solid;
     border-color: var(--color-primary-light);
     padding-top: 15px;
+  }
+
+  .project-container:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('images/RPM_principal.jpg') 50% 50% no-repeat;
+    background-size: auto 100%;
+  }
+
+  /* Hide the first 3 direct children */
+  .project-container:hover > :nth-child(-n+3) {
+    display: none;
+  }
+
+  /* show the button the forth direct child */
+  .project-container:hover > :nth-child(4) {
+    display: block;
   }
 }
