@@ -37,6 +37,9 @@ header {
 
 #logo {
   margin-left: 5%;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 
 #logo a {
@@ -545,6 +548,16 @@ footer .bar-foot {
 
   100% {
     left: 0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
