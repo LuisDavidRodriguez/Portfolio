@@ -13,6 +13,7 @@
 /* https://www.zealousweb.com/everything-you-need-to-know-about-em-rem/#:~:text=The%20default%20root%20font%20size%20of%20HTML%20is%2016px. */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,6 +123,7 @@ nav {
 #contact li {
   display: inline-block;
   padding: 0 10px;
+  transition-duration: 0.5s;
 }
 
 #contact li a {
@@ -172,6 +174,7 @@ nav {
   width: 100%;
   max-width: 327px;
   height: auto;
+  transition-duration: 1s;
 }
 
 .stories-subtitle {
@@ -199,6 +202,7 @@ nav {
   padding: 10px;
   border: solid 1px var(--color-primary-light);
   border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
 
 #principal-project-section {
@@ -216,6 +220,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  transition-duration: 1s;
 }
 
 .project-subtitle {
@@ -249,6 +254,7 @@ nav {
   color: white;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  transition: all 0.5s ease-in;
 }
 
 .about-section {
@@ -317,10 +323,11 @@ nav {
   margin-bottom: 50px;
 }
 
-.knowledge-list .li {
+.knowledge-list .know-li {
   font-size: var(--font-size-paragraph);
   font-weight: 200;
   margin: 20px 0;
+  transition: all 0.3s ease-in;
 }
 
 .button {
@@ -407,6 +414,7 @@ form textarea {
 #contact-2 li {
   display: inline-block;
   margin: 0 5px;
+  transition-duration: 0.5s;
 }
 
 #contact-2 li a {
@@ -456,8 +464,16 @@ footer .bar-foot {
   color: var(--color-accent);
 }
 
+#contact li:hover {
+  transform: scale(1.1);
+}
+
 #contact-2 li a:hover {
   color: var(--color-accent);
+}
+
+#contact-2 li:hover {
+  transform: scale(1.1);
 }
 
 #nav-bar li a:hover {
@@ -469,7 +485,28 @@ footer .bar-foot {
   animation-name: move;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
   position: relative;
+}
+
+#logo:hover {
+  border-style: groove;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: var(--color-accent);
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+
+.stories-img:hover {
+  transform: scale(1.05);
+}
+
+.sto:hover {
+  background-color: var(--color-accent);
 }
 
 .button:hover {
@@ -478,6 +515,14 @@ footer .bar-foot {
 
 .project-container:hover {
   transform: scale(1.05);
+}
+
+.tec:hover {
+  color: var(--color-accent);
+}
+
+.knowledge-list .know-li:hover {
+  color: var(--color-accent);
 }
 
 @keyframes move {
