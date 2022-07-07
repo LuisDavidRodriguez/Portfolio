@@ -613,15 +613,20 @@ footer .bar-foot {
     min-width: 290px;
   }
 
-  /* hide the 4 direct child which is the button */
+  /* hide the 4th direct child which is the button remove it from the normal flow */
   .project-container > :nth-child(4) {
-    display: none;
+    visibility: hidden;
+    position: absolute;
+    left: -10000px;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
 
-  .project-container > * {
+  /* add to the first 3 children the ability to shdow */
+  .project-container > :nth-child(-n+3) {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
 
   .about-container {
@@ -666,17 +671,21 @@ footer .bar-foot {
   }
 
   .project-container:hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('images/RPM_principal.jpg') 50% 50% no-repeat;
+    background: none, url('images/RPM_principal.jpg') 50% 50% no-repeat;
     background-size: auto 100%;
   }
 
-  /* Hide the first 3 direct children */
+  /* Hide the first 3 direct children and reduce opacity to see a smooth transition */
   .project-container:hover > :nth-child(-n+3) {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 
-  /* show the button the forth direct child */
+  /* show the button the forth direct child opacity of one to se a smooth transition */
   .project-container:hover > :nth-child(4) {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    left: 0;
   }
 }
