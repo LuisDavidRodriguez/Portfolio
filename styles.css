@@ -37,6 +37,9 @@ header {
 
 #logo {
   margin-left: 5%;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
 }
 
 #logo a {
@@ -317,6 +320,15 @@ nav {
   font-size: var(--font-size-subtitle);
 }
 
+#lang:hover,
+#frame:hover,
+#skil:hover {
+  animation-name: translate;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.2s;
+}
+
 .knowledge-list {
   list-style: none;
   margin-block-start: 0;
@@ -548,6 +560,30 @@ footer .bar-foot {
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translate {
+  0% {
+    transform: translate (0, 0);
+  }
+
+  25% {
+    transform: translate(5px, 5px);
+  }
+
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 18px;
@@ -623,7 +659,7 @@ footer .bar-foot {
   }
 
   /* add to the first 3 children the ability to shdow */
-  .project-container > :nth-child(-n+3) {
+  .project-container > :nth-child(-n + 3) {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.5s, opacity 0.5s linear;
@@ -676,7 +712,7 @@ footer .bar-foot {
   }
 
   /* Hide the first 3 direct children and reduce opacity to see a smooth transition */
-  .project-container:hover > :nth-child(-n+3) {
+  .project-container:hover > :nth-child(-n + 3) {
     visibility: hidden;
     opacity: 0;
   }
