@@ -227,6 +227,10 @@ nav {
   height: 500px;
 }
 
+.project-container:focus {
+  box-shadow: 0 10px 20px var(--color-accent);
+}
+
 .project-subtitle {
   margin-left: 10px;
   margin-right: 10px;
@@ -721,8 +725,16 @@ footer .bar-foot {
     opacity: 0;
   }
 
-  /* show the button the forth direct child opacity of one to se a smooth transition */
-  .project-container:hover > :nth-child(4) {
+  /* show the button the forth direct child opacity of one to se a smooth transition  add the fucus state to show the button accesibliliti keyboard tab */
+  .project-container:hover > :nth-child(4),
+  .project-container:focus > :nth-child(4) {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    left: 0;
+  }
+
+  .project-container > :nth-child(4):focus {
     visibility: visible;
     opacity: 1;
     position: relative;
