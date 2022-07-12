@@ -51,7 +51,7 @@
       </div>
 
       <section class="stories-container">
-        <img class="stories-img" alt="stories image" src="images/placeholder_big.png"/>
+        <img class="stories-img" alt="Is shown an image of a yoga project page" src="images/placeholder_big.png"/>
 
         <article class="stories-info">
           <h2 class="stories-subtitle">Multi-Post Stories</h2>
@@ -243,8 +243,11 @@
       <div id="form-container">
         <p>I'm always interested in hearing about new projects, so if you'd like touch at please get in touch.</p>
         <form action="https://formspree.io/f/mjvlqgdz" method="post">
+          <label for="name">Full Name:</label>
           <input id="name" name="Name" type="text" maxlength="30" placeholder="Full name" required/>
+          <label for="email">Email address:</label>
           <input id="email" name="email" type="email" pattern=".+@(hotmail.com|gmail.com|yahoo.com)" placeholder="Email address" required/>
+          <label for="comments">Comments:</label>
           <textarea id="comments" name="comments" cols="10" rows="5" maxlength="500" placeholder="Enter text here" required></textarea>
           <button id="btn-sub" class="button" type="submit">Get in touch</button>
         </form>
