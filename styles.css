@@ -1,7 +1,8 @@
 :root {
   --color-primary: hsl(0, 0%, 20%);
   --color-primary-light: hsl(0, 0%, 30%);
-  --color-accent: hsl(25, 100%, 50%);
+  --color-accent: hsl(25, 100%, 53%);
+  --color-accent-overWhite: hsl(19, 100%, 40%);
   --color-accent-dark: hsl(25, 100%, 30%);
   --nav-height: 60px;
   --nav-clear: 100px;
@@ -98,7 +99,6 @@ nav {
   line-height: 82px;
   margin-top: var(--nav-height);
   margin-bottom: 0;
-  color: #ff6b00;
   color: var(--color-accent);
   text-align: left;
   font-family: 'Crete Round', sans-serif;
@@ -247,7 +247,7 @@ nav {
   text-justify: distribute-all-lines;
   color: white;
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 500;
   font-size: var(--font-size-paragraph);
 }
 
@@ -257,9 +257,9 @@ nav {
   margin: 5px;
   padding: 10px;
   border: solid 1px var(--color-primary-light);
-  background-color: rgba(146, 146, 146, 0.555);
+  background-color: rgba(233, 233, 233, 0.699);
   border-radius: 5px;
-  color: white;
+  color: black;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   transition: all 0.5s ease-in;
@@ -342,14 +342,14 @@ nav {
 
 .knowledge-list .know-li {
   font-size: var(--font-size-paragraph);
-  font-weight: 200;
+  font-weight: 300;
   margin: 20px 0;
   transition: all 0.3s ease-in;
 }
 
 .button {
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--color-accent-overWhite);
+  color: rgb(255, 255, 255);
   font-size: var(--font-size-paragraph);
   font-family: 'Roboto', Helvetica, sans-serif;
   padding: 15px;
@@ -357,6 +357,7 @@ nav {
   text-decoration: none;
   transition: all 0.5s linear;
   text-align: center;
+  cursor: pointer;
 }
 
 footer {
@@ -371,7 +372,7 @@ footer {
 /* stylelint-disable-next-line no-descending-specificity */
 footer h2 {
   font-family: 'Roboto', sans-serif;
-  color: var(--color-accent);
+  color: var(--color-accent-overWhite);
   font-size: var(--font-size-title);
   margin-block-start: 0;
   margin-block-end: 0;
@@ -402,6 +403,7 @@ form {
 
 form label {
   visibility: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 form input {
@@ -532,6 +534,7 @@ footer .bar-foot {
 
 .button:hover {
   background-color: var(--color-accent-dark);
+  border: solid 1px #fbf8f7;
 }
 
 .project-container:hover {
@@ -694,6 +697,14 @@ footer .bar-foot {
     width: 25%;
     margin: 0 5%;
     text-align: start;
+  }
+
+  form label {
+    visibility: visible;
+  }
+
+  form input::placeholder {
+    visibility: hidden;
   }
 
   footer form {
