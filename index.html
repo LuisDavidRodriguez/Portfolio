@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Portfolio Luis David</title>
+    <title>Portfolio-Luis David</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   </head>
 
   <body>
@@ -50,11 +51,7 @@
       </div>
 
       <section class="stories-container">
-        <img
-          class="stories-img"
-          alt="stories image"
-          src="images/placeholder_big.png"
-        />
+        <img class="stories-img" alt="Is shown an image of a yoga project page" src="images/placeholder_big.png"/>
 
         <article class="stories-info">
           <h2 class="stories-subtitle">Multi-Post Stories</h2>
@@ -80,7 +77,7 @@
 
       <section id="principal-project-section">
 
-        <article class="project-container">
+        <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
             <p id="description-1" class="project-paragraph">
@@ -98,7 +95,7 @@
           <a href="#" class="button">See Project</a>
         </article>
 
-        <article id="project-2" class="project-container">
+        <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
             <p id="description-2" class="project-paragraph">
@@ -114,7 +111,7 @@
           <a href="#" class="button">See Project</a>
         </article>
 
-        <article id="project-3" class="project-container">
+        <article class="project-container" tabindex="0">
           
           <h2 class="project-subtitle">RPM Governor</h2>
             <p id="description-3" class="project-paragraph">
@@ -132,7 +129,7 @@
           <a href="#" class="button">See Project</a>
         </article>
 
-        <article id="project-4" class="project-container">
+        <article class="project-container" tabindex="0">
           
           <h2 class="project-subtitle">RPM Governor</h2>
           <p id="description-4" class="project-paragraph">
@@ -150,7 +147,7 @@
           <a href="#" class="button">See Project</a>
         </article>
 
-        <article id="project-5" class="project-container">
+        <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
             <p id="description-5" class="project-paragraph">
@@ -168,7 +165,7 @@
           <a href="#" class="button">See Project</a>
         </article>
 
-        <article id="project-6" class="project-container">
+        <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
             <p id="description-0" class="project-paragraph">
@@ -207,7 +204,7 @@
 
         <article class="knowledge-container">
           <div>
-          <h2 id="lang">Language</h2>
+          <h3 id="lang">Language</h3>
             <ul class="knowledge-list">
               <li class="know-li">Ruby</li>
               <li class="know-li">Html</li>
@@ -216,7 +213,7 @@
         </div>
 
         <div>
-          <h2 id="frame">Frameworks</h2>
+          <h3 id="frame">Frameworks</h3>
           <ul class="knowledge-list">
             <li class="know-li">Bootstrap</li>
             <li class="know-li">Ruby on Rails</li>
@@ -227,7 +224,7 @@
         </div>
 
         <div>
-          <h2 id="skil">Skills</h2>
+          <h3 id="skil">Skills</h3>
           <ul class="knowledge-list">
             <li class="know-li">CodeKit</li>
             <li class="know-li">GitHub</li>
@@ -246,8 +243,11 @@
       <div id="form-container">
         <p>I'm always interested in hearing about new projects, so if you'd like touch at please get in touch.</p>
         <form action="https://formspree.io/f/mjvlqgdz" method="post">
+          <label for="name">Full Name:</label>
           <input id="name" name="Name" type="text" maxlength="30" placeholder="Full name" required/>
+          <label for="email">Email address:</label>
           <input id="email" name="email" type="email" pattern=".+@(hotmail.com|gmail.com|yahoo.com)" placeholder="Email address" required/>
+          <label for="comments">Comments:</label>
           <textarea id="comments" name="comments" cols="10" rows="5" maxlength="500" placeholder="Enter text here" required></textarea>
           <button id="btn-sub" class="button" type="submit">Get in touch</button>
         </form>
