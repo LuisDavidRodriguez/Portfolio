@@ -10,8 +10,8 @@ burger.addEventListener('click', ()=>{
 
 closeButton.addEventListener('click', ()=>{
     modal.style.display = "none";
-})
+});
 
 menuOptions.addEventListener('click', ()=>{
     modal.style.display = "none";
-})
+});
