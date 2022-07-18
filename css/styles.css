@@ -587,6 +587,12 @@ footer .bar-foot {
   right: 0;
   margin-top: 42px;
   color: #67798e;
+  transition: all 0.5s ease-out;
+}
+
+#closeButton:hover {
+  transform: scale(1.2);
+  color: var(--color-accent);
 }
 
 #menuList {
@@ -597,14 +603,48 @@ footer .bar-foot {
 
 #menuList li {
   border-bottom: 2px solid var(--color-primary-light);
-  padding: 12px;
 }
 
 #menuList li a {
+  padding: 12px;
+  display: block;
   color: #e5e5e5;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-size: var(--font-size-subtitle);
+  transition: all 0.5s ease-out;
+}
+
+#menuList li a:hover {
+  background-color: var(--color-accent);
+}
+
+.open-menu {
+  animation-name: open-menu;
+  animation-duration: 0.5s;
+}
+
+.close-menu {
+  animation-name: close-menu;
+  animation-duration: 0.5s;
+}
+
+@keyframes open-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close-menu {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes rotate {
