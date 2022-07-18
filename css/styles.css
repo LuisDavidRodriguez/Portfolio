@@ -571,6 +571,19 @@ footer .bar-foot {
   }
 }
 
+.menu-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  z-index: 6;
+  display: none;
+}
+
+
+
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
