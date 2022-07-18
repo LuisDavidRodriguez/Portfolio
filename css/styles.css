@@ -549,28 +549,6 @@ footer .bar-foot {
   color: var(--color-accent);
 }
 
-@keyframes move {
-  0% {
-    left: 0;
-  }
-
-  25% {
-    left: 2px;
-  }
-
-  50% {
-    left: 0;
-  }
-
-  75% {
-    left: -2px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
 .menu-modal {
   height: 100%;
   width: 100%;
@@ -591,7 +569,7 @@ footer .bar-foot {
 
 #menuList {
   list-style: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
   margin: 60px 24px;
 }
 
@@ -605,6 +583,28 @@ footer .bar-foot {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-size: var(--font-size-subtitle);
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 2px;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  75% {
+    left: -2px;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 @keyframes rotate {
