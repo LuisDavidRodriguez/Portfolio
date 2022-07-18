@@ -218,7 +218,7 @@ nav {
 }
 
 .project-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url('images/RPM_principal.jpg') 50% 50% no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("../images/RPM_principal.jpg") 50% 50% no-repeat;
   background-size: auto 100%;
   display: flex;
   flex-direction: column;
@@ -549,28 +549,6 @@ footer .bar-foot {
   color: var(--color-accent);
 }
 
-@keyframes move {
-  0% {
-    left: 0;
-  }
-
-  25% {
-    left: 2px;
-  }
-
-  50% {
-    left: 0;
-  }
-
-  75% {
-    left: -2px;
-  }
-
-  100% {
-    left: 0;
-  }
-}
-
 .menu-modal {
   height: 100%;
   width: 100%;
@@ -597,7 +575,7 @@ footer .bar-foot {
 
 #menuList {
   list-style: none;
-  padding-inline-start: 0px;
+  padding-inline-start: 0;
   margin: 60px 24px;
 }
 
@@ -644,6 +622,28 @@ footer .bar-foot {
   }
   to {
     opacity: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: 2px;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  75% {
+    left: -2px;
+  }
+
+  100% {
+    left: 0;
   }
 }
 
@@ -802,7 +802,7 @@ footer .bar-foot {
   }
 
   .project-container:hover {
-    background: none, url('images/RPM_principal.jpg') 50% 50% no-repeat;
+    background: none, url('../images/RPM_principal.jpg') 50% 50% no-repeat;
     background-size: auto 100%;
   }
 
