@@ -10,24 +10,25 @@
 
   <body>
     <header>
-      <div id="logo"><a href="#welcome-section">Luis David R.</a></div>
+      <div class="logo"><a href="#welcome">Luis David R.</a></div>
 
       <nav>
-        <ul id="nav-bar">
-          <li class="nav-desktop" id="nav-portfolio"><a href="#project-title">Portfolio</a></li>
-          <li class="nav-desktop" id="nav-about"><a href="#about">About</a></li>
-          <li class="nav-desktop" id="nav-contact"><a href="#footer">Contact</a></li>
-          <li class="nav-desktop" id="nav-mail"><a href="mailto:luisdavidrodriguezv@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
-          <li class="nav-movile" id="nav-burger"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+        <ul class="nav-bar">
+          <li class="nav-desktop" id="navPortfolio"><a href="#projectTitle">Portfolio</a></li>
+          <li class="nav-desktop" id="navAbout"><a href="#about">About</a></li>
+          <li class="nav-desktop" id="navContact"><a href="#footer">Contact</a></li>
+          <li class="nav-desktop" id="navMail"><a href="mailto:luisdavidrodriguezv@gmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+          <li class="nav-movile" id="navBurger"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="welcome-section">
 
-        <article id="information">
-          <h1 id="title">Hey There. I'm Luis</h1>
+      <!--welcome-section-->
+      <section id="welcome" class="welcome-section">
+        <article class="information">
+          <h1>Hey There. I'm Luis</h1>
           <h2>I'm a Software Developer</h2>
           <p>
             I can help you build a product , feature or website Look through
@@ -36,7 +37,7 @@
           </p>
         </article>
 
-          <ul id="contact">
+          <ul class="contact">
             <li><a rel="noopener" target="_blank" href="https://www.linkedin.com/in/luis-david-rodriguez-valades-24a0a8239"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
             <li><a rel="noopener" target="_blank" href="https://github.com/LuisDavidRodriguez"><i class="fa-brands fa-github fa-lg"></i></a></li>
             <li><a rel="noopener" target="_blank" href="https://twitter.com/LuisDavid5048"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
@@ -45,11 +46,13 @@
           </ul>
       </section>
 
-      <div id="project-title">
+
+      <div id="projectTitle">
         <h2>My Recent Works</h2>
         <div></div>
       </div>
 
+      <!--Stories-section-->
       <section class="stories-container">
         <img class="stories-img" alt="Is shown an image of a yoga project page" src="images/placeholder_big.png"/>
 
@@ -75,12 +78,12 @@
         
       </section>
 
-      <section id="principal-project-section">
-
+      <!--Projects section-->
+      <section id="principalProjectSection">
         <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
-            <p id="description-1" class="project-paragraph">
+            <p id="description1" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
 
@@ -98,7 +101,7 @@
         <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
-            <p id="description-2" class="project-paragraph">
+            <p id="description2" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
 
@@ -114,7 +117,7 @@
         <article class="project-container" tabindex="0">
           
           <h2 class="project-subtitle">RPM Governor</h2>
-            <p id="description-3" class="project-paragraph">
+            <p id="description3" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
 
@@ -132,7 +135,7 @@
         <article class="project-container" tabindex="0">
           
           <h2 class="project-subtitle">RPM Governor</h2>
-          <p id="description-4" class="project-paragraph">
+          <p id="description4" class="project-paragraph">
             The circuit board was disgned in Eagle and the Software written in c++.
           </p>
 
@@ -150,7 +153,7 @@
         <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
-            <p id="description-5" class="project-paragraph">
+            <p id="description5" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
 
@@ -168,7 +171,7 @@
         <article class="project-container" tabindex="0">
           
             <h2 class="project-subtitle">RPM Governor</h2>
-            <p id="description-0" class="project-paragraph">
+            <p id="description6" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
 
@@ -185,10 +188,11 @@
 
       </section>
 
+      <!--About-->
       <section class="about-section" id="about">
         <article class="about-container">
-          <h2 id="about-title">About me</h2>
-          <p id="about-description">
+          <h2 class="about-title">About me</h2>
+          <p class="about-description">
             Hello I’m a software developer! I can help you build a product ,
             feature or website Look through some of my work and experience! If
             you like what you see and have a project you need coded, don’t
@@ -200,7 +204,7 @@
           </a>
         </article>
 
-        <div id="divition"></div>
+        <div class="divition"></div>
 
         <article class="knowledge-container">
           <div>
@@ -235,12 +239,13 @@
         </div>
         </article>
       </section>
+      
     </main>
 
     <footer id="footer">
       <h2>Contact me</h2>
 
-      <div id="form-container">
+      <div class="form-container">
         <p>I'm always interested in hearing about new projects, so if you'd like touch at please get in touch.</p>
         <form action="https://formspree.io/f/mjvlqgdz" method="post">
           <label for="name">Full Name:</label>
@@ -254,7 +259,7 @@
     </div>
 
 
-      <ul id="contact-2">
+      <ul class="contact-2">
         <li><a rel="noopener" target="_blank" href="https://www.linkedin.com/in/luis-david-rodriguez-valades-24a0a8239"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
         <li><a rel="noopener" target="_blank" href="https://github.com/LuisDavidRodriguez"><i class="fa-brands fa-github fa-lg"></i></a></li>
         <li><a rel="noopener" target="_blank" href="https://twitter.com/LuisDavid5048"><i class="fa-brands fa-twitter fa-lg"></i></a></li>
