@@ -2,8 +2,6 @@ const modal = document.querySelector('#menuModal');
 const burger = document.querySelector('#navBurger');
 const closeButton = document.querySelector('#closeButton');
 const menuOptions = document.querySelector('#menuList');
-const headers = document.querySelector('.header-spy');
-const obsever = new IntersectionObserver();
 
 burger.addEventListener('click', () => {
   modal.classList.add('open-menu');

@@ -56,6 +56,8 @@ nav {
 .nav-bar {
   list-style: none;
   padding: 0 20px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .nav-movile {
@@ -63,8 +65,12 @@ nav {
 }
 
 .nav-bar li a {
+  display: flex;
+  align-items: center;
   color: white;
   text-decoration: none;
+  height: var(--nav-height);
+  padding: 0 15px;
 }
 
 .nav-desktop {
@@ -270,6 +276,7 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 100px 0;
+  scroll-margin-top: 100px;
 }
 
 .about-container {
@@ -322,6 +329,12 @@ nav {
 #frame,
 #skil {
   font-size: var(--font-size-subtitle);
+}
+
+#contactHeader,
+#aboutHeader,
+#projectHeader {
+  scroll-margin-top: var(--nav-clear);
 }
 
 #lang:hover,
@@ -485,9 +498,6 @@ footer .bar-foot {
 
 .contact li a:hover {
   color: var(--color-accent);
-}
-
-.contact li:hover {
   transform: scale(1.1);
 }
 
@@ -499,12 +509,17 @@ footer .bar-foot {
   transform: scale(1.1);
 }
 
+.scroll-active {
+  background: radial-gradient(var(--color-accent), var(--color-primary-light));
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 3;
+  position: relative;
+}
+
 .nav-bar li a:hover {
-  width: 100px;
-  border-style: groove;
-  border-width: 1px;
-  border-radius: 5px;
-  border-color: var(--color-accent);
+  background: radial-gradient(var(--color-primary-light), var(--color-accent));
   animation-name: move;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -685,7 +700,6 @@ footer .bar-foot {
   .nav-desktop {
     display: inline-block;
     font-family: 'inter', sans-serif;
-    margin: 0 15px;
     transition: all 0.5s linear;
   }
 
