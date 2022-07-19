@@ -85,3 +85,36 @@ closeButton.addEventListener('click', () => {
 menuOptions.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+
+workButton.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+  
+});
+
+projectButton1.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+projectButton2.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+projectButton3.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+projectButton4.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+projectButton5.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+projectButton6.addEventListener('click', () => {
+  projectPup.style.display = 'flex';
+});
+
+pupClose.addEventListener('click', () => {
+  projectPup.style.display = 'none';
+});
