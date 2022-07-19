@@ -16,6 +16,58 @@ const pTxt = document.querySelector('#popUpDesc');
 const pBtnLive = document.querySelector('#popUpLive');
 const pBtnSource = document.querySelector('#popUpSource');
 
+const arrProjects = [
+  {'name': 'Multi-Post Stories',
+   'description': 'this is the project one',
+   'img':'images/projects/projects16',
+   'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+   'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+   'linkToSource': 'https://github.com/sntgopl/Porfolio'
+  },
+  {'name': 'Professional Art Printing Data',
+   'description': 'this is the project Two',
+   'img':'images/projects/projects16',
+   'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+   'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+   'linkToSource': 'https://github.com/sntgopl/Porfolio'
+  },
+  {'name': 'Data Dashboard Healthcare',
+  'description': 'this is the project Three',
+  'img':'images/projects/projects16',
+  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+  'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+  'linkToSource': 'https://github.com/sntgopl/Porfolio'
+ },
+ {'name': 'Website Protfolio',
+  'description': 'this is the project Fourth',
+  'img':'images/projects/projects16',
+  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+  'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+  'linkToSource': 'https://github.com/sntgopl/Porfolio'
+},
+{'name': 'Profesional Art Printing Data More',
+  'description': 'this is the project five',
+  'img':'images/projects/projects16',
+  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+  'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+  'linkToSource': 'https://github.com/sntgopl/Porfolio'
+},
+{'name': 'Data Dashboard Healthcare',
+ 'description': 'this is the project six',
+ 'img':'images/projects/projects16',
+ 'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+ 'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+ 'linkToSource': 'https://github.com/sntgopl/Porfolio'
+},
+{'name': 'Website Protfolio',
+ 'description': 'this is the project seven',
+ 'img':'images/projects/projects16',
+ 'technologies':['html', 'Bootstrap', 'Ruby and Race'],
+ 'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
+ 'linkToSource': 'https://github.com/sntgopl/Porfolio'
+}    
+];
+
 burger.addEventListener('click', () => {
   modal.classList.add('open-menu');
   modal.classList.remove('close-menu');
