@@ -57,8 +57,8 @@
         <img class="stories-img" alt="Is shown an image of a yoga project page" src="images/placeholder_big.png"/>
 
         <article class="stories-info">
-          <h2 class="stories-subtitle">Multi-Post Stories</h2>
-          <p class="stories-paragraph">
+          <h2 id="storiesSubtitle" class="stories-subtitle">Multi-Post Stories</h2>
+          <p id="storiesDescription" class="stories-paragraph">
             A daily selection of privately personalized reads; no accounts or
             sign-ups required. has been the industry's standard dummy text ever
             since the 1500s, when an unknown printer took a standard dummy text.
@@ -82,7 +82,7 @@
       <section id="principalProjectSection">
         <article class="project-container" tabindex="0">
           
-            <h2 class="project-subtitle">RPM Governor</h2>
+            <h2 id="projectTitle1" class="project-subtitle">RPM Governor</h2>
             <p id="description1" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
@@ -100,7 +100,7 @@
 
         <article class="project-container" tabindex="0">
           
-            <h2 class="project-subtitle">RPM Governor</h2>
+            <h2 id="projectTitle2" class="project-subtitle">RPM Governor</h2>
             <p id="description2" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
@@ -116,7 +116,7 @@
 
         <article class="project-container" tabindex="0">
           
-          <h2 class="project-subtitle">RPM Governor</h2>
+          <h2 id="projectTitle3" class="project-subtitle">RPM Governor</h2>
             <p id="description3" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
@@ -134,7 +134,7 @@
 
         <article class="project-container" tabindex="0">
           
-          <h2 class="project-subtitle">RPM Governor</h2>
+          <h2 id="projectTitle4" class="project-subtitle">RPM Governor</h2>
           <p id="description4" class="project-paragraph">
             The circuit board was disgned in Eagle and the Software written in c++.
           </p>
@@ -152,7 +152,7 @@
 
         <article class="project-container" tabindex="0">
           
-            <h2 class="project-subtitle">RPM Governor</h2>
+            <h2 id="projectTitle5" class="project-subtitle">RPM Governor</h2>
             <p id="description5" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
@@ -170,7 +170,7 @@
 
         <article class="project-container" tabindex="0">
           
-            <h2 class="project-subtitle">RPM Governor</h2>
+            <h2 id="projectTitle6" class="project-subtitle">RPM Governor</h2>
             <p id="description6" class="project-paragraph">
               The circuit board was disgned in Eagle and the Software written in c++.
             </p>
@@ -273,12 +273,46 @@
 
 
     <div id="menuModal" class="menu-modal">
-      <i id="closeButton" class="fa-solid fa-xmark fa-2xl"></i>
+      <i id="closeButton" class="cross-button fa-solid fa-xmark fa-2xl"></i>
       <ul id="menuList">
         <li><a href="#projectHeader">Portfolio</a></li>
         <li><a href="#aboutHeader">About</a></li>
         <li><a href="#contactHeader">Contact</a></li>
       </ul>
+    </div>
+
+
+    <div id="modalProject" >
+
+      <section id="modalContainer" class="modal-body">        
+        <i id="projectCloseButton" class="cross-button fa-solid fa-xmark fa-2xl"></i>
+        <h1>Keeping track of hundreds  of components website</h1>
+        <ul class="stories-technologies">
+          <li class="sto">html</li>
+          <li class="sto">Bootstrap</li>
+          <li class="sto">Ruby on rails</li>
+        </ul>
+
+        <article class="modal-main">
+          
+          <img src="images/placeholder_project.png" class="img-responsive" alt="image of the project">
+          
+
+          <article>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with 
+               the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+               standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the 
+               releax map lapora verita.
+            </p>
+            <div>
+              <a id="seeLiveBtn" class="button">See Live <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a id="seeSourceBtn" class="button"> See Source <i class="fa-brands fa-github-alt"></i></a>
+            </div>            
+          </article>
+
+        </article>
+      </section>
     </div>
 
 

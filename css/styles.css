@@ -371,6 +371,7 @@ nav {
   transition: all 0.5s linear;
   text-align: center;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 footer {
@@ -549,7 +550,6 @@ footer .bar-foot {
 
 .button:hover {
   background-color: var(--color-accent-dark);
-  border: solid 1px #fbf8f7;
 }
 
 .project-container:hover {
@@ -579,11 +579,14 @@ footer .bar-foot {
   margin-left: 90vw;
   right: 0;
   margin-top: 42px;
+}
+
+.cross-button {
   color: #67798e;
   transition: all 0.5s ease-out;
 }
 
-#closeButton:hover {
+.cross-button:hover {
   transform: scale(1.2);
   color: var(--color-accent);
 }
@@ -620,6 +623,81 @@ footer .bar-foot {
 .close-menu {
   animation-name: close-menu;
   animation-duration: 0.5s;
+}
+
+#modalProject {
+  background-color: rgba(0, 0, 0, 0.842);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projectCloseButton {
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+#modalProject .modal-body {
+  background-color: white;
+  max-height: 90%;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#modalProject .modal-body h1 {
+  font-family: 'roboto', sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+#modalProject .modal-body ul {
+  margin: 40px 0 0 0;
+}
+
+#modalProject .modal-main {
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modalProject .modal-main .img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+#modalProject .modal-main article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  min-width: 200px;
+}
+
+#modalProject .modal-main article p {
+  font-size: var(--font-size-paragraph);
+  font-family: 'Inter', sans-serif;
+}
+
+#modalProject .modal-main article div {
+  display: flex;
+}
+
+#seeLiveBtn,
+#seeSourceBtn {
+  margin: 0 5px;
+  font-size: var(--font-size-paragraph);
 }
 
 @keyframes open-menu {
@@ -689,6 +767,39 @@ footer .bar-foot {
 }
 
 @media screen and (min-width: 768px) {
+  #modalProject .modal-body ul {
+    margin: 0;
+  }
+
+  #modalProject .modal-body {
+    overflow: hidden;
+  }
+
+  #modalProject .modal-main {
+    flex-direction: row;
+  }
+
+  #modalProject .modal-main article {
+    padding: 0 10px;
+    min-width: 200px;
+    max-width: none;
+    align-self: stretch;
+  }
+
+  #modalProject .modal-main p {
+    min-width: 200px;
+    max-height: 400px;
+    overflow-y: scroll;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  #modalProject .modal-main .img-responsive {
+    max-width: 50%;
+    max-height: 448px;
+    height: auto;
+  }
+
   html {
     font-size: 18px;
   }
