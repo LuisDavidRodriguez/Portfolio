@@ -8,7 +8,7 @@ function showError(message) {
   mailInput.setCustomValidity(message);
   mailInput.reportValidity();
 
-  mailError.textContent =  message;
+  mailError.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> ${message}`;
   mailError.classList.add('error');
 }
 
@@ -35,6 +35,16 @@ function checkFormatMail (input) {
   return true;
 }
 
+mailInput.addEventListener('input', () => {
+  // each time the user introduce something
+  console.log(mailInput.value);
+  mailInput.setCustomValidity('');
+  mailInput.classList.remove('invalid');
+  mailError.textContent = '';
+  mailError.classList.remove('error');
+  mailError.classList.remove('success');
+});
+
 export default function mailValidation () { 
   form.addEventListener('submit', (event) => {
 
@@ -49,15 +59,5 @@ export default function mailValidation () {
 });
 }
 
-
-  mailInput.addEventListener('input', () => {
-    // each time the user introduce something
-    console.log(mailInput.value);
-    mailInput.setCustomValidity('');
-    mailInput.classList.remove('invalid');
-    mailError.textContent = '';
-    mailError.classList.remove('error');
-    mailError.classList.remove('success');
-  });
 
 
