@@ -694,12 +694,26 @@ footer .bar-foot {
 }
 
 #modalProject .modal-main article p {
-  font-size: var(--font-size-paragraph);
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
+  color: #344563;
+  line-height: 30px;
 }
 
 #modalProject .modal-main article div {
   display: flex;
+}
+
+.tec-modal {
+  display: inline-block;
+  font-size: var(--font-size-paragraph);
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid#a1a2a3;
+  transition: all 0.5s ease-in-out;
+  color: #3c3a39;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 #seeLiveBtn,

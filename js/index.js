@@ -1,17 +1,19 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-plusplus */
 const modal = document.querySelector('#menuModal');
 const burger = document.querySelector('#navBurger');
 const closeButton = document.querySelector('#closeButton');
 const menuOptions = document.querySelector('#menuList');
 const modalProject = document.querySelector('#modalProject');
 const modalProjectClose = document.querySelector('#projectCloseButton');
-const storiesButton = document.querySelector('#buttonStories');
+let storiesButton = null;
 
 const arrProjects = [
   {
     name: 'Multi-Post Stories',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.',
     img: 'images/placeholder_big.png',
-    technologies: ['css', 'html', 'bootstrp', 'ruby'],
+    technologies: ['Css', 'html', 'Bootstrp', 'Ruby'],
     linkToLive: 'https://www.youtube.com/watch?v=gFCYbsZE5Gw',
     linkToSource: 'https://github.com/LuisDavidRodriguez/Portfolio',
   },
@@ -35,7 +37,7 @@ const arrProjects = [
     name: 'CNC Plasma cutter',
     description: 'It is a CNC plasma cutter it has 3 axis and use PAPs motors, was designed enterely in solidWorks and printend some pieces in 3d prindre, it use arduido and cnc shield with conected into fusion360 manofacturing solidWorks pieces I desing and made in SolidWorks a CNC machine, its heart was arduino and the CNC shield, with a plasma torch attached to its Z axis. It uses PAPs motors, drivers, StopLimit switches, and pices made from 3D printer. I made it because I had to make another machine made 100% from metal, thereby I needed something that allow me to cut with precision from my SolidWorks and fusion360 designs. I was acquainted with PAP motors an electronics because in highschool I studied Mecatronics, I made as final project a robotic arm. I applied to the IPN University (one of the most recogniced public universities in Mexico) Lo and behold I found out that I chose the wrong carrier, Industrial Engenering, pritty dull, so I studied only 1 semester there and returned to work in the pretty little family company because also we didn\'t have too much money in that time. There is where all this history start.',
     img: 'images/projects/plasma.png',
-    technologies: ['solidWorks', 'Fusion360', 'GRBL'],
+    technologies: ['SolidWorks', 'Fusion360', 'GRBL'],
     linkToLive: 'https://github.com/LuisDavidRodriguez',
     linkToSource: 'https://github.com/LuisDavidRodriguez',
   },
@@ -84,66 +86,54 @@ function populateModal(number, arr) {
   project.technologies.forEach((item) => {
     const element = document.createElement('li');
     element.innerText = item;
-    element.classList.add('sto');
+    element.classList.add('tec-modal');
     modalProjectList.append(element);
   });
 }
 
-function populateProjects(arr) {
-  const allTheProjects = document.querySelectorAll('.project-container');
-  let iterator = 1;
+function createProjects(arr) {
+  const parent = document.querySelector('#principalProjectSection');
 
-  allTheProjects.forEach((projectContainer) => {
-    const data = arr[iterator];
-    const title = projectContainer.querySelector('h2');
-    const description = projectContainer.querySelector('p');
-    const list = projectContainer.querySelector('ul');
+  for (let i = 1; i < arr.length; i++) {
+    // eslint-disable-next-line object-curly-newline
+    const { name, description, img, technologies } = arr[i];
+    const container = document.createElement('article');
+    container.classList.add('project-container');
+    const liElements = technologies.map((item) => `<li class="tec">${item}</li>`);
 
-    title.innerText = data.name;
-    // eslint-disable-next-line prefer-template
-    description.innerText = data.description.substring(0, 100) + '...';
-    projectContainer.style.background = `url(${data.img}) 50% 50% no-repeat`;
-    projectContainer.style.backgroundSize = 'auto 100%';
+    container.innerHTML = `<div>
+    <h2 class="project-subtitle">${name}</h2>
+    <p class="project-paragraph">${description.substring(0, 100) + '...'}</p>
+    <ul class="stories-technologies">${liElements.join('')}</ul>    
+    </div>
+    <a id="buttonProject${i}" href="#" class="button">See Project</a>`;
 
-    list.innerHTML = '';
-    // populate the list with the tecnologies
-    data.technologies.forEach((tec) => {
-      const tecnologie = document.createElement('li');
-      tecnologie.innerText = tec;
-      tecnologie.classList.add('tec');
-      list.append(tecnologie);
-    });
-
-    // eslint-disable-next-line no-plusplus
-    iterator++;
-  });
+    container.style.background = `url(${img}) 50% 50% no-repeat`;
+    container.style.backgroundSize = 'auto 100%';
+    parent.append(container);
+  }
 }
 
 function populateStories(arr) {
   const storiesSection = document.querySelector('.stories-container');
+  // eslint-disable-next-line object-curly-newline
+  const { name, description, img, technologies } = arr[0];
+  const liElements = technologies.map((item) => `<li class="sto">${item}</li>`);
 
-  const data = arr[0];
-  const img = storiesSection.querySelector('img');
-  const title = storiesSection.querySelector('h2');
-  const description = storiesSection.querySelector('p');
-  const list = storiesSection.querySelector('ul');
+  storiesSection.innerHTML = `<img
+  class="stories-img" alt="Is shown an image of a yoga project page" src="${img}"/>
+  <article class="stories-info">
+    <h2 class="stories-subtitle">${name}</h2>
+    <p class="stories-paragraph">${description.substring(0, 400) + '...'}</p>
+    <ul class="stories-technologies">${liElements.join('')}</ul>
+    <a id="buttonStories" href="#" class="button">See Project</a>
+  </article>`;
 
-  title.innerText = data.name;
-  description.innerText = data.description.substring(0, 500);
-  img.setAttribute('src', data.img);
-
-  list.innerHTML = '';
-  // populate the list with the tecnologies
-  data.technologies.forEach((tec) => {
-    const tecnologie = document.createElement('li');
-    tecnologie.innerText = tec;
-    tecnologie.classList.add('sto');
-    list.append(tecnologie);
-  });
+  storiesButton = document.querySelector('#buttonStories');
 }
 
-populateProjects(arrProjects);
 populateStories(arrProjects);
+createProjects(arrProjects);
 
 burger.addEventListener('click', (event) => {
   event.preventDefault();
