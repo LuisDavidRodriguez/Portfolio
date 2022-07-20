@@ -2,65 +2,148 @@ const modal = document.querySelector('#menuModal');
 const burger = document.querySelector('#navBurger');
 const closeButton = document.querySelector('#closeButton');
 const menuOptions = document.querySelector('#menuList');
-const workButton = document.querySelector('#workSeeBtn');
 const modalProject = document.querySelector('#modalProject');
 const modalProjectClose = document.querySelector('#projectCloseButton');
 const storiesButton = document.querySelector('#buttonStories');
-const projectsButtons = document.querySelectorAll('#principalProjectSection .button');
 
 const arrProjects = [
-  {'name': 'Multi-Post Stories',
-   'description': 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
-   'img':'images/placeholder_big.png',
-   'technologies':['css', 'html', 'bootstrp', 'ruby'],
-   'linkToLive': 'https://www.youtube.com/watch?v=gFCYbsZE5Gw',
-   'linkToSource': 'https://github.com/LuisDavidRodriguez/Portfolio'
+  {
+    name: 'Multi-Post Stories',
+    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.',
+    img: 'images/placeholder_big.png',
+    technologies: ['css', 'html', 'bootstrp', 'ruby'],
+    linkToLive: 'https://www.youtube.com/watch?v=gFCYbsZE5Gw',
+    linkToSource: 'https://github.com/LuisDavidRodriguez/Portfolio',
   },
-  {'name': 'RPM governor',
-   'description': 'Its principal aim is read the RPM of the engine also the temperature, the status of the lights, the voltage of the battery and by consequence the health of the Alternator,  whether the RPM surpass 3000RPM the system produce an alarm alerting to the driver, if the driver carry on and the engine transgress 3250 RPM the system open a relay and turn off the engine.',
-   'img':'images/projects/RPM_principal.jpg',
-   'technologies':['C++', 'Eagle software', 'JLCPCB'],
-   'linkToLive': 'https://www.youtube.com/watch?v=bgHtr_pt5h8',
-   'linkToSource': 'https://github.com/sntgopl/Porfolio'
+  {
+    name: 'RPM governor',
+    description: 'Its principal aim is read the RPM of the engine also the temperature, the status of the lights, the voltage of the battery and by consequence the health of the Alternator,  whether the RPM surpass 3000RPM the system produce an alarm alerting to the driver, if the driver carry on and the engine transgress 3250 RPM the system open a relay and turn off the engine.\n\nI designed the electronic board, chose and order each of one the electronic components, send the GERBER files to china and assemble the components by hand by myself. I also wrote all the software on C++ and in a very basic IDE witch is Arduino IDE at the end it was being my first approach to the marvelous and endless programing world. Im working in the new version because Im looking forward a Patent.',
+    img: 'images/projects/RPM_principal.jpg',
+    technologies: ['C++', 'Eagle software', 'JLCPCB'],
+    linkToLive: 'https://www.youtube.com/watch?v=bgHtr_pt5h8',
+    linkToSource: 'https://github.com/LuisDavidRodriguez/RPMgobernor',
   },
-  {'name': 'Kaliope Android app agent control',
-  'description': 'this is the project Three',
-  'img':'images/projects/kaliope_agentes.png',
-  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
-  'linkToLive': 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX',
-  'linkToSource': 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX'
- },
- {'name': 'CNC Plasma cutter',
-  'description': 'It is a css plasma cutter it has 3 axis and use PAPs motors, was designed enterely in solidWorks and printend some pieces in 3d prindre, it use arduido and cnc shield with conected into fusion360 manofacturing solidWorks pieces',
-  'img':'images/projects/plasma.png',
-  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
-  'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
-  'linkToSource': 'https://github.com/sntgopl/Porfolio'
-},
-{'name': 'Kaliope Android App clientes',
-  'description': 'This is a digital store running in android and availabe in the playstore!',
-  'img':'images/projects/kaliope_clientes.png',
-  'technologies':['html', 'Bootstrap', 'Ruby and Race'],
-  'linkToLive': 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX',
-  'linkToSource': 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX'
-},
-{'name': 'Automovile GPS',
- 'description': 'This is a GPS based on Atmega 2560, module GPRS GPS SIM808, SD module, and another ATmega module  which also includes ',
- 'img':'images/projects/gps_project.jpg',
- 'technologies':['C++', 'Microcontroller', 'SIM808'],
- 'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
- 'linkToSource': 'https://github.com/sntgopl/Porfolio'
-},
-{'name': 'Website Protfolio',
- 'description': 'this is the project seven',
- 'img':'images/projects/projects16',
- 'technologies':['html', 'Bootstrap', 'Ruby and Race'],
- 'linkToLive': 'https://github.com/sntgopl/sntgopl.github.io',
- 'linkToSource': 'https://github.com/sntgopl/Porfolio'
-}    
-];
+  {
+    name: 'Kaliope Android app',
+    description: 'Android App for the workers, this app is published in the Play Store Mexico under my developer account.\n This app include an inventory management system, manage the clients of each worker, it can operate in online and offline mode, it make use of the GPS and portray in an instance of googleMap API the location of the worker and the location in the city of each client, their status with a pushpin, name and a polygon like a digital fence. If a new client is open the location is saved on the phone displayed on the map and send to the company server. The worker deliver new goods receive the payments and establish connection with a Bluetooth receipt printer to hand in the receipt to the client while all the data is saved in a SQLite table, the inventory increase or decrease, if the phone has internet connection send the data to the server, if not once the worker arrive to the warehouse and the app detects WIFI the app synchronizes automatically the data. In an old version of this app I add a QRCode Scaner with the Zxing library.',
+    img: 'images/projects/kaliope_agentes.png',
+    technologies: ['Java', 'PHP', 'MySQLite'],
+    linkToLive: 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX',
+    linkToSource: 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX',
+  },
+  {
+    name: 'CNC Plasma cutter',
+    description: 'It is a CNC plasma cutter it has 3 axis and use PAPs motors, was designed enterely in solidWorks and printend some pieces in 3d prindre, it use arduido and cnc shield with conected into fusion360 manofacturing solidWorks pieces I desing and made in SolidWorks a CNC machine, its heart was arduino and the CNC shield, with a plasma torch attached to its Z axis. It uses PAPs motors, drivers, StopLimit switches, and pices made from 3D printer. I made it because I had to make another machine made 100% from metal, thereby I needed something that allow me to cut with precision from my SolidWorks and fusion360 designs. I was acquainted with PAP motors an electronics because in highschool I studied Mecatronics, I made as final project a robotic arm. I applied to the IPN University (one of the most recogniced public universities in Mexico) Lo and behold I found out that I chose the wrong carrier, Industrial Engenering, pritty dull, so I studied only 1 semester there and returned to work in the pretty little family company because also we didn\'t have too much money in that time. There is where all this history start.',
+    img: 'images/projects/plasma.png',
+    technologies: ['solidWorks', 'Fusion360', 'GRBL'],
+    linkToLive: 'https://github.com/LuisDavidRodriguez',
+    linkToSource: 'https://github.com/LuisDavidRodriguez',
+  },
+  {
+    name: 'Kaliope Android  store',
+    description: 'Android App Kaliope Clientes pedidos, This app is available in Play Store Mexico under my developer account. This app was released the previous year, it is an Store where the clients of the company can sing in see all the products with pictures displayed on a recyclerview, using the library "Glide", add items to their car look when their product will arrive, delete and submit their order sending the information to the company server the server modify the stock quantity of each product, another important feature is that this app also is allowed to work in offline mode, when there is no internet connection, it changes automatically to Offline mode and now all the images are showed from the Glide Cache with the URL stored on a xml file created by a Shared Preferences instance. In the server with PHP the information is received managed and stored in the tables Related with this app I developed "Kaliope Almacen Pedidos" which connect with the server and my php files to retrieve the data, the employees in the warehouse can visualize the information seeing the clients data, the products, deliver date, the branch of the company the package belonged to, afterwards they are able to tick each product make the package and pressing the button "print label" the app establish a Bluetooth connection with a adeshive labels Chinese printer zJing, print all the data in a adhesive label including a QR code, finalizing the order, pushing the information into the server, and now the client can see if its order is ready to be delivered. ',
+    img: 'images/projects/kaliope_clientes.png',
+    technologies: ['Java', 'PHP', 'SQL'],
+    linkToLive: 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX',
+    linkToSource: 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX',
+  },
+  {
+    name: 'Automovile GPS',
+    description: 'Kaliope was buying GPS from china to monitor its fleet, when the Pandemic broke out the Chinese platform broke down. Thus It was impossible view and follow the cars, so I though, wouldn\'t be great if I could design my owns GPS add and personalize them with some special features that the company will need? So I started to figure out, looking for all the information in internet, learning copious information, and muster all the components needed. It takes me about 4 months and a lot of prototypes. I design the circuit board, wrote all the code now in Visual Studio with the Visual-micro plugin, that IDE in contrast with the very basic Arduino IDE allowed me to outstrip my first approach I made with the "RPM Governor system", I learned a lot and now I was able to understand the familiarities and differences between each language how C++ manage its header files and source files, class declarations, inheritance, polymorphism, the differences between variabless demeanor, how an array works a little different in java php or c++, that indeed I need to clear from the memory an array when it would not be used any more. The difference between pointers and pass a variable through reference or its explicit position in the memory, why one char array was full of junky bits when it was being used in another method.',
+    img: 'images/projects/gps_project.jpg',
+    technologies: ['C++', 'At328', 'At2560', 'Sim808'],
+    linkToLive: 'https://github.com/LuisDavidRodriguez',
+    linkToSource: 'https://github.com/LuisDavidRodriguez',
+  },
+  {
+    name: 'Automovile Acelerometer',
+    description: 'Accelerometer sensor and flow sensor. This is another software and hardware related to the GPS system, I add this feature because the drivers has a totally careless driving way, so the vehicles were being regularly struck with rocks or another obstacles resulting in staggering maintenance bills for the company. Now each car has a Accelerometer sensor, which is read by a microcontroler each 10ms, when the G-forces goes out from certain levels the software convert the analog lecture to a digital value and categorize the lecture according to one given scale',
+    img: 'images/projects/acelerometer.png',
+    technologies: ['C++', 'PHP', 'SQL', 'Eagle'],
+    linkToLive: 'https://github.com/LuisDavidRodriguez',
+    linkToSource: 'https://github.com/LuisDavidRodriguez',
+  }];
+
+function populateModal(number, arr) {
+  const modalProjectTitle = modalProject.querySelector('h3');
+  const modalProjectList = modalProject.querySelector('ul');
+  const modalProjectImage = modalProject.querySelector('img');
+  const modalProjectDescription = modalProject.querySelector('p');
+  const modalProjectSeeLiveBtn = modalProject.querySelector('#seeLiveBtn');
+  const modalProjectSeeSourceBtn = modalProject.querySelector('#seeSourceBtn');
+
+  const project = arr[number];
+  modalProjectTitle.innerText = project.name;
+  modalProjectDescription.innerText = project.description;
+  modalProjectImage.src = project.img;
+  modalProjectSeeLiveBtn.setAttribute('href', project.linkToLive);
+  modalProjectSeeSourceBtn.attributes.href.nodeValue = project.linkToSource;
+
+  // add dinamically the li elements into the list
+  modalProjectList.innerHTML = '';
+  project.technologies.forEach((item) => {
+    const element = document.createElement('li');
+    element.innerText = item;
+    element.classList.add('sto');
+    modalProjectList.append(element);
+  });
+}
+
+function populateProjects(arr) {
+  const allTheProjects = document.querySelectorAll('.project-container');
+  let iterator = 1;
+
+  allTheProjects.forEach((projectContainer) => {
+    const data = arr[iterator];
+    const title = projectContainer.querySelector('h2');
+    const description = projectContainer.querySelector('p');
+    const list = projectContainer.querySelector('ul');
+
+    title.innerText = data.name;
+    // eslint-disable-next-line prefer-template
+    description.innerText = data.description.substring(0, 100) + '...';
+    projectContainer.style.background = `url(${data.img}) 50% 50% no-repeat`;
+    projectContainer.style.backgroundSize = 'auto 100%';
+
+    list.innerHTML = '';
+    // populate the list with the tecnologies
+    data.technologies.forEach((tec) => {
+      const tecnologie = document.createElement('li');
+      tecnologie.innerText = tec;
+      tecnologie.classList.add('tec');
+      list.append(tecnologie);
+    });
+
+    // eslint-disable-next-line no-plusplus
+    iterator++;
+  });
+}
+
+function populateStories(arr) {
+  const storiesSection = document.querySelector('.stories-container');
+
+  const data = arr[0];
+  const img = storiesSection.querySelector('img');
+  const title = storiesSection.querySelector('h2');
+  const description = storiesSection.querySelector('p');
+  const list = storiesSection.querySelector('ul');
+
+  title.innerText = data.name;
+  description.innerText = data.description.substring(0, 500);
+  img.setAttribute('src', data.img);
+
+  list.innerHTML = '';
+  // populate the list with the tecnologies
+  data.technologies.forEach((tec) => {
+    const tecnologie = document.createElement('li');
+    tecnologie.innerText = tec;
+    tecnologie.classList.add('sto');
+    list.append(tecnologie);
+  });
+}
 
 populateProjects(arrProjects);
+populateStories(arrProjects);
 
 burger.addEventListener('click', (event) => {
   event.preventDefault();
@@ -84,79 +167,21 @@ menuOptions.addEventListener('click', () => {
 storiesButton.addEventListener('click', (event) => {
   modalProject.style.display = 'flex';
   event.preventDefault();
-  populateModal (0, arrProjects);
+  populateModal(0, arrProjects);
 });
 
 document.addEventListener('click', (event) => {
-  let targetId = event.target.id;
-  let regex = /(?<=buttonProject)\d+$/;       //regex to match the las number at the end all my projects buttons has is number at the end
-  if (regex.test(targetId)){
-    //if the button presed any project we get the number and use that number to populate the modal
+  const targetId = event.target.id;
+  const regex = /(?<=buttonProject)\d+$/; // regex to match the las number at the end all my projects buttons has is number at the end
+  if (regex.test(targetId)) {
+    // if the button presed any project we get the number and use that number to populate the modal
     event.preventDefault();
-    let match = targetId.match(regex)[0];
+    const match = targetId.match(regex)[0];
     modalProject.style.display = 'flex';
-    populateModal (match, arrProjects);
+    populateModal(match, arrProjects);
   }
-  
 }, false);
 
 modalProjectClose.addEventListener('click', () => {
   modalProject.style.display = 'none';
 });
-
-projectsButtons.forEach(button => {
-  console.log(button);
-});
-
-function populateModal (number, arr) {
-  const modalProjectTitle = modalProject.querySelector('h3');
-  const modalProjectList = modalProject.querySelector('ul');
-  const modalProjectImage = modalProject.querySelector('img');
-  const modalProjectDescription = modalProject.querySelector('p');
-  const modalProjectSeeLiveBtn = modalProject.querySelector('#seeLiveBtn');
-  const modalProjectSeeSourceBtn = modalProject.querySelector('#seeSourceBtn');
-
-  let project = arr[number];
-  modalProjectTitle.innerText = project.name;
-  modalProjectDescription.innerText = project.description;
-  modalProjectImage.src = project.img;
-  modalProjectSeeLiveBtn.setAttribute('href', project.linkToLive);
-  modalProjectSeeSourceBtn.attributes.href.nodeValue = project.linkToSource;
-  
-  //add dinamically the li elements into the list
-  modalProjectList.innerHTML = '';
-  project.technologies.forEach(item => {
-    const element = document.createElement('li');
-    element.innerText = item;
-    element.classList.add ('sto');
-    modalProjectList.append(element);
-  });
-}
-
-function populateProjects (arr) {
-  const allTheProjects = document.querySelectorAll(".project-container");
-  let iterator = 1;
-
-  allTheProjects.forEach(projectContainer => {
-    const data = arr[iterator];
-    const title = projectContainer.querySelector('h2');
-    const description = projectContainer.querySelector('p');
-    const list = projectContainer.querySelector('ul');
-
-    title.innerText = data.name;
-    description.innerText = data.description.substring(0, 100) + '...';
-    projectContainer.style.background = `linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),  url('${data.img}') 50% 50% no-repeat`;
-    list.innerHTML = '';
-
-    //populate the list with the tecnologies
-    data.technologies.forEach(tec => {
-      let tecnologie = document.createElement('li');
-      tecnologie.innerText = tec;
-      tecnologie.classList.add('tec');
-      list.append(tecnologie);
-    });
-    
-    iterator++;
-  });
-
-};
