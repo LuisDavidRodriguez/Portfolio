@@ -29,7 +29,7 @@ const arrProjects = [
     img: 'images/projects/kaliope_agentes.png',
     technologies: ['Java', 'PHP', 'MySQLite'],
     linkToLive: 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX',
-    linkToSource: 'https://play.google.com/store/apps/details?id=mx.kaliope.luisda&hl=es_MX',
+    linkToSource: 'https://bitbucket.org/david5048/kaliopeagentesandroid/src/master/',
   },
   {
     name: 'CNC Plasma cutter',
@@ -45,7 +45,7 @@ const arrProjects = [
     img: 'images/projects/kaliope_clientes.png',
     technologies: ['Java', 'PHP', 'SQL'],
     linkToLive: 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX',
-    linkToSource: 'https://play.google.com/store/apps/details?id=com.kaliopeDavid.kaliopeclientespedidos&hl=es_MX',
+    linkToSource: 'https://bitbucket.org/david5048/appclientesandroid/src/master/',
   },
   {
     name: 'Automovile GPS',
@@ -53,7 +53,7 @@ const arrProjects = [
     img: 'images/projects/gps_project.jpg',
     technologies: ['C++', 'At328', 'At2560', 'Sim808'],
     linkToLive: 'https://github.com/LuisDavidRodriguez',
-    linkToSource: 'https://github.com/LuisDavidRodriguez',
+    linkToSource: 'https://bitbucket.org/david5048/gpsarduino-2/src/master/',
   },
   {
     name: 'Automovile Acelerometer',
@@ -61,7 +61,7 @@ const arrProjects = [
     img: 'images/projects/acelerometer.png',
     technologies: ['C++', 'PHP', 'SQL', 'Eagle'],
     linkToLive: 'https://github.com/LuisDavidRodriguez',
-    linkToSource: 'https://github.com/LuisDavidRodriguez',
+    linkToSource: 'https://bitbucket.org/david5048/acelerometrodefinitivo/src/master/',
   }];
 
 function populateModal(number, arr) {
