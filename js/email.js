@@ -1,4 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
 const mailInput = document.querySelector('[type=email]');
 const mailError = document.querySelector('.message');
 const form = document.querySelector('#contactForm');
