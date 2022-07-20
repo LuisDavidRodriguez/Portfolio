@@ -1,7 +1,7 @@
+/* eslint linebreak-style: ["error", "windows"] */
 const mailInput = document.querySelector('[type=email]');
 const mailError = document.querySelector('.message');
 const form = document.querySelector('#contactForm');
-
 
 function showError(message) {
   mailInput.className = ('invalid');
@@ -12,32 +12,30 @@ function showError(message) {
   mailError.classList.add('error');
 }
 
-function checkFormatMail (input) {
-  console.log(input);
-  let regex = /.+@(hotmail.com|gmail.com|yahoo.com)/;
-  let regexCapital = /[A-Z]/g;
+function checkFormatMail(input) {
+  const regex = /.+@(hotmail.com|gmail.com|yahoo.com)/;
+  const regexCapital = /[A-Z]/g;
 
-  if(input == '') {
+  if (input === '') {
     showError('please enter an email');
     return false;
   }
-  
+
   if (regexCapital.test(input)) {
-     showError('Your email should be in low letters');
-     return false;
+    showError('Your email should be in low letters');
+    return false;
   }
 
   if (!regex.test(input)) {
     showError('the email should include @hotmail.com  @gmail.com  @yahoo.com');
     return false;
   }
-  
+
   return true;
 }
 
 mailInput.addEventListener('input', () => {
   // each time the user introduce something
-  console.log(mailInput.value);
   mailInput.setCustomValidity('');
   mailInput.classList.remove('invalid');
   mailError.textContent = '';
@@ -45,19 +43,15 @@ mailInput.addEventListener('input', () => {
   mailError.classList.remove('success');
 });
 
-export default function mailValidation () { 
+export default function mailValidation() {
   form.addEventListener('submit', (event) => {
-
     event.preventDefault();
-    let value = mailInput.value.trim();
+    const value = mailInput.value.trim();
 
-    if (checkFormatMail(value)){
+    if (checkFormatMail(value)) {
       form.submit();
       mailError.classList.add('success');
       mailError.innerHTML = '<i class="fa-solid fa-circle-check"></i> Sending Form';
     }
-});
+  });
 }
-
-
-
