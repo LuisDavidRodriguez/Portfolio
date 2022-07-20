@@ -8,7 +8,7 @@ function showError(message) {
   mailInput.setCustomValidity(message);
   mailInput.reportValidity();
 
-  mailError.textContent = message;
+  mailError.textContent =  message;
   mailError.classList.add('error');
 }
 
@@ -44,7 +44,7 @@ export default function mailValidation () {
     if (checkFormatMail(value)){
       form.submit();
       mailError.classList.add('success');
-      mailError.textContent = 'Sending Form';
+      mailError.innerHTML = '<i class="fa-solid fa-circle-check"></i> Sending Form';
     }
 });
 }
