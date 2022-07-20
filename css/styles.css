@@ -224,7 +224,7 @@ nav {
 }
 
 .project-container {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("../images/RPM_principal.jpg") 50% 50% no-repeat;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4)), url("../images/projects/RPM_principal.jpg") 50% 50% no-repeat;
   background-size: auto 100%;
   display: flex;
   flex-direction: column;
@@ -633,7 +633,7 @@ footer .bar-foot {
   z-index: 5;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -655,7 +655,7 @@ footer .bar-foot {
   overflow-x: hidden;
 }
 
-#modalProject .modal-body h1 {
+#modalProject .modal-body h3 {
   font-family: 'roboto', sans-serif;
   font-size: 32px;
   margin: 0;
@@ -929,7 +929,7 @@ footer .bar-foot {
   }
 
   .project-container:hover {
-    background: none, url('../images/RPM_principal.jpg') 50% 50% no-repeat;
+    background: none, url('../images/projects/RPM_principal.jpg') 50% 50% no-repeat;
     background-size: auto 100%;
   }
 
