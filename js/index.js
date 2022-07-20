@@ -1,5 +1,7 @@
 /* eslint-disable prefer-template */
 /* eslint-disable no-plusplus */
+import emailValidation from './email.js';
+
 const modal = document.querySelector('#menuModal');
 const burger = document.querySelector('#navBurger');
 const closeButton = document.querySelector('#closeButton');
@@ -7,7 +9,6 @@ const menuOptions = document.querySelector('#menuList');
 const modalProject = document.querySelector('#modalProject');
 const modalProjectClose = document.querySelector('#projectCloseButton');
 let storiesButton = null;
-
 const arrProjects = [
   {
     name: 'Multi-Post Stories',
@@ -175,3 +176,5 @@ document.addEventListener('click', (event) => {
 modalProjectClose.addEventListener('click', () => {
   modalProject.style.display = 'none';
 });
+
+emailValidation();

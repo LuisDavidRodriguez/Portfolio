@@ -121,14 +121,17 @@
 
       <div class="form-container">
         <p>I'm always interested in hearing about new projects, so if you'd like touch at please get in touch.</p>
-        <form action="https://formspree.io/f/mjvlqgdz" method="post">
+        <form id="contactForm" action="https://formspree.io/f/mjvlqgdz" method="post">
           <label for="name">Full Name:</label>
           <input id="name" name="Name" type="text" maxlength="30" placeholder="Full name" required/>
           <label for="email">Email address:</label>
-          <input id="email" name="email" type="email" pattern=".+@(hotmail.com|gmail.com|yahoo.com)" placeholder="Email address" required/>
+          <input id="email" name="email" type="email" placeholder="Email address"/>
           <label for="comments">Comments:</label>
           <textarea id="comments" name="comments" cols="10" rows="5" maxlength="500" placeholder="Enter text here" required></textarea>
-          <button id="btn-sub" class="button" type="submit">Get in touch</button>
+          <div>
+            <button id="btn-sub" class="button" type="submit">Get in touch</button>
+            <span class="message" aria-live="polite"></span>
+          </div>
         </form>
     </div>
 
@@ -194,6 +197,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet"/>
-    <script src="js/index.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
