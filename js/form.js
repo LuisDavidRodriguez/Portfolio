@@ -1,4 +1,6 @@
+const nameInput = document.querySelector('#name');
 const mailInput = document.querySelector('[type=email]');
+const textArea = document.querySelector('#comments');
 const mailError = document.querySelector('.message');
 const form = document.querySelector('#contactForm');
 
@@ -40,6 +42,12 @@ mailInput.addEventListener('input', () => {
   mailError.textContent = '';
   mailError.classList.remove('error');
   mailError.classList.remove('success');
+});
+
+nameInput.addEventListener('input', () => {
+  // everytime the user write something in name input
+  console.log(nameInput.value);
+  
 });
 
 export default function mailValidation() {
