@@ -1,6 +1,19 @@
+import * as storage from './dataStorage.js';
+
+const storageAvailable = storage.storageAvailable();
+const nameInput = document.querySelector('#name');
 const mailInput = document.querySelector('[type=email]');
+const textArea = document.querySelector('#comments');
 const mailError = document.querySelector('.message');
 const form = document.querySelector('#contactForm');
+
+(() => {
+  if (!storageAvailable) return;
+  const data = storage.getStorage(storage.FORM_DATA);
+  nameInput.value = data[storage.KEY_NAME];
+  mailInput.value = data[storage.KEY_EMAIL];
+  textArea.value = data[storage.KEY_COMMENTS];
+})();
 
 function showError(message) {
   mailInput.className = ('invalid');
@@ -40,6 +53,12 @@ mailInput.addEventListener('input', () => {
   mailError.textContent = '';
   mailError.classList.remove('error');
   mailError.classList.remove('success');
+});
+
+form.addEventListener('input', () => {
+  if (storageAvailable) {
+    storage.setFormStorage(nameInput.value, mailInput.value, textArea.value);
+  }
 });
 
 export default function mailValidation() {

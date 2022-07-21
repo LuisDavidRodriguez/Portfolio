@@ -1,7 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable prefer-template */
-/* eslint-disable no-plusplus */
-import emailValidation from './email.js';
+import emailValidation from './form.js';
 import { populateStories, createProjects } from './projects.js';
 
 const modal = document.querySelector('#menuModal');

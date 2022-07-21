@@ -80,7 +80,7 @@ nav {
 .welcome-section {
   background-color: gray;
   background-color: var(--color-primary);
-  background-image: url('images/figure.png');
+  background-image: url('/images/figure.png');
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 160% 110%;
@@ -288,7 +288,7 @@ nav {
 }
 
 .about-container {
-  background: url('images/Frame.png') 100% 100% no-repeat;
+  background: url('/images/Frame.png') 100% 100% no-repeat;
   background-size: 30% auto;
   display: flex;
   flex-direction: column;
@@ -940,7 +940,7 @@ footer .bar-foot {
   }
 
   .about-container {
-    background: url('images/frame_big.png') 100% 50% no-repeat;
+    background: url('/images/frame_big.png') 100% 50% no-repeat;
     background-size: 40% auto;
   }
 
