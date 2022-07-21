@@ -44,6 +44,18 @@ mailInput.addEventListener('input', () => {
   mailError.classList.remove('success');
 });
 
+let storage = {
+  'name': ;
+  'mail': ;
+  'comment': ;
+}
+
+function populateStorage() {
+  localStorage.setItem('name', nameInput.value); 
+  localStorage.setItem('mail', mailInput.value); 
+  localStorage.setItem('comment', textArea.value); 
+}
+
 nameInput.addEventListener('input', () => {
   // everytime the user write something in name input
   console.log(nameInput.value);
