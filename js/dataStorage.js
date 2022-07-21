@@ -1,8 +1,12 @@
 const LOCAL_STORAGE = 'localStorage';
-const KEY_FORM_NAME = 'name';
-const KEY_FORM_EMAIL = 'email';
-const KEY_FORM_COMMENTS = 'comments';
-function storageAvailable(type) {
+const FORM_DATA = 'form';
+const KEY_NAME = 'name';
+const KEY_EMAIL = 'email';
+const KEY_COMMENTS = 'comments';
+
+const formData = { [KEY_NAME]: '', [KEY_EMAIL]: '', [KEY_COMMENTS]: '' };
+
+function storageAvailable(type = LOCAL_STORAGE) {
   let storage;
   try {
     storage = window[type];
@@ -24,10 +28,20 @@ function storageAvailable(type) {
   }
 }
 
-function deleteAll() {
-  localStorage.clear();
+function setFormStorage(name, mail, comments) {
+  formData[KEY_NAME] = name;
+  formData[KEY_EMAIL] = mail;
+  formData[KEY_COMMENTS] = comments;
+  localStorage.setItem(FORM_DATA, JSON.stringify(formData));
 }
 
-const check = () => console.log(storageAvailable(LOCAL_STORAGE));
+function getStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
 
-export { check as storageAvailable };
+export {
+  storageAvailable,
+  FORM_DATA, KEY_NAME, KEY_EMAIL, KEY_COMMENTS,
+  getStorage,
+  setFormStorage,
+};

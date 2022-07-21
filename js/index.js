@@ -3,7 +3,6 @@
 /* eslint-disable no-plusplus */
 import emailValidation from './form.js';
 import { populateStories, createProjects } from './projects.js';
-import { storageAvailable } from './dataStorage.js';
 
 const modal = document.querySelector('#menuModal');
 const burger = document.querySelector('#navBurger');
@@ -32,4 +31,3 @@ menuOptions.addEventListener('click', () => {
 populateStories();
 createProjects();
 emailValidation();
-storageAvailable();

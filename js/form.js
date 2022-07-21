@@ -1,8 +1,19 @@
+import * as storage from './dataStorage.js';
+
+const storageAvailable = storage.storageAvailable();
 const nameInput = document.querySelector('#name');
 const mailInput = document.querySelector('[type=email]');
 const textArea = document.querySelector('#comments');
 const mailError = document.querySelector('.message');
 const form = document.querySelector('#contactForm');
+
+(() => {
+  if (!storageAvailable) return;
+  const data = storage.getStorage(storage.FORM_DATA);
+  nameInput.value = data[storage.KEY_NAME];
+  mailInput.value = data[storage.KEY_EMAIL];
+  textArea.value = data[storage.KEY_COMMENTS];
+})();
 
 function showError(message) {
   mailInput.className = ('invalid');
@@ -42,38 +53,13 @@ mailInput.addEventListener('input', () => {
   mailError.textContent = '';
   mailError.classList.remove('error');
   mailError.classList.remove('success');
-  populateStorage();
 });
 
-let storage = {
-  'name': ;
-  'mail': ;
-  'comment': ;
-}
-
-function populateStorage() {
-  localStorage.setItem('name', nameInput.value); 
-  localStorage.setItem('mail', mailInput.value); 
-  localStorage.setItem('comment', textArea.value); 
-}
-
-function getFromStorage() {
-  nameInput.value = localStorage.getItem('name');
-  mailInput.value = localStorage.getItem('mail');
-  textArea.value = localStorage.getItem('comment');
-}
-
-getFromStorage();
-
-nameInput.addEventListener('input', () => {
-  // everytime the user write something in name input
-  console.log(nameInput.value);
-  populateStorage();
+form.addEventListener('input', () => {
+  if (storageAvailable) {
+    storage.setFormStorage(nameInput.value, mailInput.value, textArea.value);
+  }
 });
-
-textArea.addEventListener('input', () => {
-  populateStorage();
-})
 
 export default function mailValidation() {
   form.addEventListener('submit', (event) => {
