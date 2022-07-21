@@ -42,6 +42,7 @@ mailInput.addEventListener('input', () => {
   mailError.textContent = '';
   mailError.classList.remove('error');
   mailError.classList.remove('success');
+  populateStorage();
 });
 
 let storage = {
@@ -56,11 +57,23 @@ function populateStorage() {
   localStorage.setItem('comment', textArea.value); 
 }
 
+function getFromStorage() {
+  nameInput.value = localStorage.getItem('name');
+  mailInput.value = localStorage.getItem('mail');
+  textArea.value = localStorage.getItem('comment');
+}
+
+getFromStorage();
+
 nameInput.addEventListener('input', () => {
   // everytime the user write something in name input
   console.log(nameInput.value);
-  
+  populateStorage();
 });
+
+textArea.addEventListener('input', () => {
+  populateStorage();
+})
 
 export default function mailValidation() {
   form.addEventListener('submit', (event) => {
