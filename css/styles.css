@@ -80,7 +80,7 @@ nav {
 .welcome-section {
   background-color: gray;
   background-color: var(--color-primary);
-  background-image: url('/images/figure.png');
+  background-image: url("/images/figure.png");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: 160% 110%;
@@ -107,18 +107,18 @@ nav {
   margin-bottom: 0;
   color: var(--color-accent);
   text-align: left;
-  font-family: 'Crete Round', sans-serif;
+  font-family: "Crete Round", sans-serif;
 }
 
 .information h2 {
   font-size: var(--font-size-subtitle);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .information p {
   width: 95%;
   font-size: var(--font-size-paragraph);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 200;
   line-height: 32px;
 }
@@ -153,7 +153,7 @@ nav {
 }
 
 #projectTitle h2 {
-  font-family: 'Create Round', Helvetica, sans-serif;
+  font-family: "Create Round", Helvetica, sans-serif;
   font-size: var(--font-size-subtitle);
 }
 
@@ -187,7 +187,7 @@ nav {
 }
 
 .stories-subtitle {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   margin-bottom: 0;
   font-size: var(--font-size-subtitle);
 }
@@ -232,9 +232,10 @@ nav {
   transition-duration: 1s;
   height: 500px;
 }
+
 /* stylelint-disable-next-line no-descending-specificity */
 .project-container div {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.4));
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -248,7 +249,7 @@ nav {
 .project-subtitle {
   margin-left: 10px;
   margin-right: 10px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   margin-bottom: 0;
   color: white;
   font-size: var(--font-size-subtitle);
@@ -260,7 +261,7 @@ nav {
   margin: 0 10px;
   text-justify: distribute-all-lines;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: var(--font-size-paragraph);
 }
@@ -274,7 +275,7 @@ nav {
   background-color: rgba(233, 233, 233, 0.699);
   border-radius: 5px;
   color: black;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   transition: all 0.5s ease-in;
 }
@@ -288,7 +289,7 @@ nav {
 }
 
 .about-container {
-  background: url('/images/Frame.png') 100% 100% no-repeat;
+  background: url("/images/Frame.png") 100% 100% no-repeat;
   background-size: 30% auto;
   display: flex;
   flex-direction: column;
@@ -299,7 +300,7 @@ nav {
 
 .about-title {
   color: var(--color-accent);
-  font-family: 'Crete Round', serif;
+  font-family: "Crete Round", serif;
   width: 100%;
   font-size: 4em;
   font-weight: 400;
@@ -320,7 +321,7 @@ nav {
   min-width: 150px;
   text-justify: distribute-all-lines;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
   margin-bottom: 30px;
   font-size: var(--font-size-paragraph);
@@ -329,7 +330,7 @@ nav {
 .knowledge-container {
   color: white;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 300;
 }
 
@@ -372,7 +373,7 @@ nav {
   background-color: var(--color-accent-overWhite);
   color: rgb(255, 255, 255);
   font-size: var(--font-size-paragraph);
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   padding: 15px;
   font-weight: 400;
   text-decoration: none;
@@ -391,15 +392,17 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
+
 /* stylelint-disable-next-line no-descending-specificity */
 footer h2 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: var(--color-accent-overWhite);
   font-size: var(--font-size-title);
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: var(--nav-height);
 }
+
 /* stylelint-disable-next-line no-descending-specificity */
 footer .form-container {
   display: flex;
@@ -413,7 +416,7 @@ footer .form-container {
   font-size: var(--font-size-subtitle);
   font-weight: 700;
   line-height: 44px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 form {
@@ -425,7 +428,7 @@ form {
 
 form label {
   visibility: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 form input {
@@ -440,7 +443,7 @@ form textarea {
   background-color: #fbf8f7;
   width: 100%;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #btn-sub {
@@ -523,22 +526,22 @@ footer .bar-foot {
 }
 
 .knowledge-container #lang::before {
-  content: '\f219';
-  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
+  content: "\f219";
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
 
 .knowledge-container #frame::before {
-  content: '\f0c8';
-  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
+  content: "\f0c8";
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
 
 .knowledge-container #skil::before {
-  content: '\f111';
-  font-family: 'Font Awesome 5 Free', Helvetica, sans-serif;
+  content: "\f111";
+  font-family: "Font Awesome 5 Free", Helvetica, sans-serif;
   color: var(--color-accent);
   margin-right: 10px;
 }
@@ -652,7 +655,7 @@ footer .bar-foot {
   display: block;
   color: #e5e5e5;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: var(--font-size-subtitle);
   transition: all 0.5s ease-out;
 }
@@ -702,7 +705,7 @@ footer .bar-foot {
 }
 
 #modalProject .modal-body h3 {
-  font-family: 'roboto', sans-serif;
+  font-family: "roboto", sans-serif;
   font-size: 32px;
   margin: 0;
 }
@@ -733,7 +736,7 @@ footer .bar-foot {
 
 #modalProject .modal-main article p {
   font-size: 16px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #344563;
   line-height: 30px;
 }
@@ -747,10 +750,10 @@ footer .bar-foot {
   font-size: var(--font-size-paragraph);
   margin: 5px;
   padding: 10px;
-  border: 1px solid#a1a2a3;
+  border: 1px solid #a1a2a3;
   transition: all 0.5s ease-in-out;
   color: #3c3a39;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
@@ -764,88 +767,70 @@ footer .bar-foot {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 @keyframes close-menu {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
 }
-
 @keyframes move {
   0% {
     left: 0;
   }
-
   25% {
     left: 2px;
   }
-
   50% {
     left: 0;
   }
-
   75% {
     left: -2px;
   }
-
   100% {
     left: 0;
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 @keyframes translate {
   0% {
-    transform: translate (0, 0);
+    transform: translate 0, 0;
   }
-
   25% {
     transform: translate(5px, 5px);
   }
-
   50% {
     transform: translate(-5px, -5px);
   }
 }
-
 @media screen and (min-width: 768px) {
   #modalProject .modal-body ul {
     margin: 0;
   }
-
   #modalProject .modal-body {
     overflow: hidden;
   }
-
   #modalProject .modal-main {
     flex-direction: row;
   }
-
   #modalProject .modal-main article {
     padding: 0 10px;
     min-width: 200px;
     max-width: none;
     align-self: stretch;
   }
-
   #modalProject .modal-main p {
     min-width: 200px;
     max-height: 400px;
@@ -853,27 +838,22 @@ footer .bar-foot {
     margin-block-start: 0;
     margin-block-end: 0;
   }
-
   #modalProject .modal-main .img-responsive {
     max-width: 50%;
     max-height: 448px;
     height: auto;
   }
-
   html {
     font-size: 18px;
   }
-
   .nav-movile {
     display: none;
   }
-
   .nav-desktop {
     display: inline-block;
-    font-family: 'inter', sans-serif;
+    font-family: "inter", sans-serif;
     transition: all 0.5s linear;
   }
-
   .welcome-section {
     background-size: 30%;
     background-position: center right;
@@ -881,48 +861,39 @@ footer .bar-foot {
     align-items: center;
     justify-content: flex-end;
   }
-
   .information {
     width: 500px;
     margin-top: 0;
     margin-left: 3%;
   }
-
   .contact li {
     display: block;
     margin: 20px 0;
   }
-
   #projectTitle {
     flex-direction: row;
     justify-content: center;
   }
-
   #projectTitle h2 {
     width: fit-content;
     margin-right: 20px;
   }
-
   #projectTitle div {
     width: 70%;
   }
-
   .stories-container {
     flex-direction: row;
     justify-content: center;
   }
-
   .stories-img {
     max-width: 684px;
     width: 60%;
   }
-
   .stories-info {
     margin-left: 20px;
     max-width: 558px;
     min-width: 290px;
   }
-
   /* hide the 2th direct child which is the button remove it from the normal flow */
   .project-container > :nth-child(2) {
     visibility: hidden;
@@ -931,25 +902,21 @@ footer .bar-foot {
     opacity: 0;
     transition: visibility 0.5s, opacity 0.5s linear;
   }
-
   /* add to the first children the ability to shdow */
   .project-container > :nth-child(1) {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.5s, opacity 0.5s linear;
   }
-
   .about-container {
-    background: url('/images/frame_big.png') 100% 50% no-repeat;
+    background: url("/images/frame_big.png") 100% 50% no-repeat;
     background-size: 40% auto;
   }
-
   .knowledge-container {
     display: flex;
     justify-content: space-evenly;
     text-align: start;
   }
-
   footer .form-container {
     flex-direction: row;
     justify-content: center;
@@ -961,48 +928,40 @@ footer .bar-foot {
     margin: 0 5%;
     text-align: start;
   }
-
   form label {
     visibility: visible;
   }
-
   form input::placeholder {
     visibility: hidden;
   }
-
   footer form {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-
   footer .bar-foot {
     display: none;
   }
-
   .contact-2 {
     width: 100%;
     border-top: 1px solid;
     border-color: var(--color-primary-light);
     padding-top: 15px;
   }
-
   /* Hide the first direct children and reduce opacity to see a smooth transition */
   .project-container:hover > :nth-child(1) {
     visibility: hidden;
     opacity: 0;
   }
-
   /* show the button the second direct child opacity of one to se a smooth transition  add the fucus state to show the button accesibliliti keyboard tab */
   .project-container:hover > :nth-child(2),
-  .project-container:focus > :nth-child(2) {
+.project-container:focus > :nth-child(2) {
     visibility: visible;
     opacity: 1;
     position: relative;
     left: 0;
   }
-
   .project-container > :nth-child(2):focus {
     visibility: visible;
     opacity: 1;
@@ -1010,3 +969,5 @@ footer .bar-foot {
     left: 0;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

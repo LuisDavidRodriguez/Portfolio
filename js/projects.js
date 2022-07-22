@@ -137,8 +137,9 @@ function storiesListener() {
   });
 }
 
-document.addEventListener('click', (event) => {
+document.addEventListener((event) => {
   const targetId = event.target.id;
+  console.log(event.type);
   const regex = /(?<=buttonProject)\d+$/; // regex to match the las number at the end all my projects buttons has is number at the end
   if (regex.test(targetId)) {
     // if the button presed any project we get the number and use that number to populate the modal

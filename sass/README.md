@@ -1,0 +1,3 @@
+# Luis David Rodriguez Note
+It still pretty difficult for me understand what should or not be placed inside of each folder, i just take a boilerplate template as a guide line while I understand
+[Page information](https://www.learnhowtoprogram.com/user-interfaces/building-layouts-preprocessors/7-1-sass-architecture) the template [Template](https://github.com/KittyGiraudel/sass-boilerplate/tree/master/stylesheets) 
