@@ -137,7 +137,7 @@ function storiesListener() {
   });
 }
 
-document.addEventListener((event) => {
+document.addEventListener('click',(event) => {
   const targetId = event.target.id;
   console.log(event.type);
   const regex = /(?<=buttonProject)\d+$/; // regex to match the las number at the end all my projects buttons has is number at the end
